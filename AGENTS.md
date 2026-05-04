@@ -16,6 +16,20 @@ That workspace is considered the validated Doosan ROS 2 environment.
 
 This repository should remain focused on documentation, reproducible experiments, study notes, and future custom ROS 2 packages.
 
+## Official References
+
+Use these official references when working with ROS 2 or Doosan Robotics ROS 2:
+
+- ROS 2 Jazzy documentation:
+  - https://docs.ros.org/en/jazzy/
+
+- Doosan Robotics ROS 2 Jazzy manual:
+  - https://doosanrobotics.github.io/doosan-robotics-ros-manual/jazzy/index.html
+
+When implementing or documenting ROS 2 behavior, prefer official documentation over assumptions.
+
+Do not invent ROS 2 commands, Doosan services, message types, launch files, package names, or APIs. If something is unknown, inspect the local workspace or ask for clarification before making changes.
+
 ## Repository Language
 
 Use English for:
