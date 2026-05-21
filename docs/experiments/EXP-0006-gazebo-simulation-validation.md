@@ -2,7 +2,7 @@
 
 ## Status
 
-Pending Validation
+Validated
 
 ## Objective
 
@@ -215,7 +215,7 @@ Expected example:
 ### Terminal B — Inspect joint states
 
 ```bash
-ros2 topic echo /joint_states
+ros2 topic echo /dsr01/joint_states
 ```
 
 ### Expected Result
@@ -255,16 +255,21 @@ If supported by the launch configuration, RViz2 may also open.
 
 ## Actual Result
 
-Pending validation.
+The experiment was completed successfully.
 
-After validation, document:
+Gazebo launched correctly with the Doosan `m1013` in the local ROS 2 Jazzy environment. The simulated robot loaded successfully and exposed the expected ROS 2 graph information for inspection.
 
-- whether Gazebo launched successfully;
-- whether the Doosan `m1013` model loaded correctly;
-- whether `/joint_states` was available;
-- whether `/tf` and `/tf_static` were available;
-- whether Doosan-related services were visible;
-- any warnings or errors shown in the terminal.
+Validated observations:
+
+- The Gazebo launch file `dsr_bringup2_gazebo.launch.py` was available.
+- Gazebo launched successfully with the `m1013` model using the `dsr01` namespace.
+- The Doosan `m1013` model loaded correctly in the simulation environment.
+- ROS 2 nodes related to Gazebo, robot state, controllers, and Doosan were active.
+- The `/dsr01/joint_states` topic was available and published joint state messages.
+- Transform topics were available, including `/tf` and `/tf_static`.
+- Doosan-related services were visible under the `/dsr01` namespace.
+
+No blocking warnings or errors were identified during the validation.
 
 ## Evidence
 
@@ -285,11 +290,9 @@ Suggested evidence:
 
 ## Conclusion
 
-Pending validation.
+The experiment confirms that Gazebo can be used as a simulation layer for the Doosan `m1013` in the local ROS 2 Jazzy environment.
 
-This experiment should confirm whether Gazebo can be used as a simulation layer for the Doosan `m1013` in the local ROS 2 Jazzy environment.
-
-It should also clarify the practical difference between RViz2 visualization, MoveIt2 planning, and Gazebo simulation.
+This result clarifies the practical separation between the main tools: RViz2 is useful for visualization, MoveIt2 is useful for planning, and Gazebo is useful for simulation. Gazebo can therefore be used in future experiments that require a simulated robot environment beyond visualization or trajectory planning alone.
 
 ## Next Step
 
