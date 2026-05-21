@@ -2,7 +2,8 @@
 
 ## Purpose
 
-This directory stores generated outputs, logs, JSON files, screenshots, and other evidence produced by experiments.
+This directory stores generated outputs, logs, JSON files, screenshots, and other
+evidence produced by experiments.
 
 ## Recommended Content
 
@@ -16,4 +17,5 @@ Reports may include:
 
 ## Rule
 
-Outputs should be referenced from experiment files when relevant. Do not add large binary files.
+Outputs should be referenced from experiment files when relevant. Do not add large
+binary files.

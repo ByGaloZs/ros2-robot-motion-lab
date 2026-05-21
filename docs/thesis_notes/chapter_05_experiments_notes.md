@@ -2,13 +2,16 @@
 
 ## Purpose of This Section
 
-Collect working notes about experiment results and technical validation for the future TFM experiments chapter.
+Collect working notes about experiment results and technical validation for the future
+TFM experiments chapter.
 
 ## Key Ideas
 
-- Initial experiments validated ROS 2, Doosan services, MoveIt2, Gazebo, and a Python `rclpy` service client prototype.
+- Initial experiments validated ROS 2, Doosan services, MoveIt2, Gazebo, and a Python
+  `rclpy` service client prototype.
 - Future experiments should validate custom modules and integration boundaries.
-- Experiment evidence should link to generated outputs, logs, screenshots, or command records when relevant.
+- Experiment evidence should link to generated outputs, logs, screenshots, or command
+  records when relevant.
 
 ## Technical Evidence from Repository
 

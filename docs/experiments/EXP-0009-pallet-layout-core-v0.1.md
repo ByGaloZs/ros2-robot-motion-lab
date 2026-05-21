@@ -2,15 +2,19 @@
 
 ## Objective
 
-Validate whether a robot-agnostic Python module can generate palletizing target poses from box and pallet dimensions.
+Validate whether a robot-agnostic Python module can generate palletizing target poses
+from box and pallet dimensions.
 
 ## Context
 
-This experiment starts the implementation phase of the custom modular architecture. Previous experiments validated the ROS 2, Doosan, MoveIt2, and Gazebo environment. This experiment validates the geometric layout layer before connecting it to ROS 2 execution.
+This experiment starts the implementation phase of the custom modular architecture.
+Previous experiments validated the ROS 2, Doosan, MoveIt2, and Gazebo environment. This
+experiment validates the geometric layout layer before connecting it to ROS 2 execution.
 
 ## Hypothesis
 
-A pure Python module can generate a deterministic grid-based pallet layout with layers, slots, and target poses without depending on ROS 2 or Doosan-specific services.
+A pure Python module can generate a deterministic grid-based pallet layout with layers,
+slots, and target poses without depending on ROS 2 or Doosan-specific services.
 
 ## Setup
 
@@ -31,14 +35,10 @@ A pure Python module can generate a deterministic grid-based pallet layout with 
 
 ## Procedure
 
-1. Define the initial data models.
-2. Validate input dimensions.
-3. Generate grid-based slots for one layer.
-4. Generate multiple layers.
-5. Calculate target poses for every slot.
-6. Export the generated layout as JSON.
-7. Run unit tests.
-8. Review the generated output manually.
+1. Define the initial data models. 2. Validate input dimensions. 3. Generate grid-based
+slots for one layer. 4. Generate multiple layers. 5. Calculate target poses for every
+slot. 6. Export the generated layout as JSON. 7. Run unit tests. 8. Review the generated
+output manually.
 
 ## Expected Result
 
@@ -75,8 +75,10 @@ Pending
 
 ## Notes
 
-This experiment validates only geometric layout generation. It does not validate robot motion, trajectory planning, collision checking, or reachability.
+This experiment validates only geometric layout generation. It does not validate robot
+motion, trajectory planning, collision checking, or reachability.
 
 ## Impact on Architecture
 
-The result of this experiment will influence the data models consumed later by `robot_motion_client`, `pallet_layout_dashboard`, and `doosan_motion_adapter`.
+The result of this experiment will influence the data models consumed later by
+`robot_motion_client`, `pallet_layout_dashboard`, and `doosan_motion_adapter`.

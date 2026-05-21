@@ -6,7 +6,8 @@ Validated
 
 ## Objective
 
-Validate that the Doosan `m1013` can execute a joint motion command in virtual mode using the official ROS 2 service:
+Validate that the Doosan `m1013` can execute a joint motion command in virtual mode
+using the official ROS 2 service:
 
 ```text
 /dsr01/dsr_controller2/motion/move_joint
@@ -20,9 +21,11 @@ dsr_msgs2/srv/MoveJoint
 
 ## Context
 
-This experiment verifies that the robot can be controlled directly through the official Doosan ROS 2 service interface, without relying on high-level wrappers.
+This experiment verifies that the robot can be controlled directly through the official
+Doosan ROS 2 service interface, without relying on high-level wrappers.
 
-This is an important baseline for future work because the project aims to build a custom ROS 2 motion client using:
+This is an important baseline for future work because the project aims to build a custom
+ROS 2 motion client using:
 
 - `dsr_msgs2`
 - `dsr_controller2`
@@ -108,9 +111,11 @@ ros2 launch dsr_bringup2 dsr_bringup2_rviz.launch.py mode:=virtual host:=127.0.0
 
 ### Expected Result
 
-The Doosan virtual stack should launch successfully with RViz2 and the Doosan `m1013` model.
+The Doosan virtual stack should launch successfully with RViz2 and the Doosan `m1013`
+model.
 
-The terminal should remain active while the experiment is executed from another terminal.
+The terminal should remain active while the experiment is executed from another
+terminal.
 
 ---
 
@@ -225,7 +230,8 @@ or an equivalent successful service response.
 
 ## Actual Result
 
-The Doosan `m1013` successfully executed the joint motion command in virtual mode using the official ROS 2 `MoveJoint` service.
+The Doosan `m1013` successfully executed the joint motion command in virtual mode using
+the official ROS 2 `MoveJoint` service.
 
 The service was available under the expected namespace:
 
@@ -239,7 +245,8 @@ The service type matched the expected interface:
 dsr_msgs2/srv/MoveJoint
 ```
 
-The robot responded correctly to a small relative joint movement and to the reverse movement.
+The robot responded correctly to a small relative joint movement and to the reverse
+movement.
 
 ## Evidence
 
@@ -259,9 +266,11 @@ Suggested evidence:
 
 ## Conclusion
 
-The experiment validates that the Doosan `m1013` can be controlled directly through the official ROS 2 `MoveJoint` service in virtual mode.
+The experiment validates that the Doosan `m1013` can be controlled directly through the
+official ROS 2 `MoveJoint` service in virtual mode.
 
-This confirms that future custom clients can communicate with Doosan ROS 2 services directly, without depending on high-level wrappers such as `DSR_ROBOT2.py`.
+This confirms that future custom clients can communicate with Doosan ROS 2 services
+directly, without depending on high-level wrappers such as `DSR_ROBOT2.py`.
 
 ## Next Step
 
@@ -273,4 +282,5 @@ Potential next experiment:
 EXP-0002-robot-state-inspection.md
 ```
 
-The goal would be to inspect topics, services, or state interfaces that expose the current robot state, joint positions, and transforms.
+The goal would be to inspect topics, services, or state interfaces that expose the
+current robot state, joint positions, and transforms.

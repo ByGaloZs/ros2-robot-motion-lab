@@ -6,11 +6,13 @@ Validated
 
 ## Objective
 
-Validate that MoveIt2 can plan and execute trajectories for the Doosan `m1013` in the local ROS 2 Jazzy environment.
+Validate that MoveIt2 can plan and execute trajectories for the Doosan `m1013` in the
+local ROS 2 Jazzy environment.
 
 ## Context
 
-Previous experiments validate direct service-based motion through Doosan ROS 2 interfaces.
+Previous experiments validate direct service-based motion through Doosan ROS 2
+interfaces.
 
 This experiment validates the motion planning layer using MoveIt2.
 
@@ -20,7 +22,8 @@ The goal is to understand the role of MoveIt2 in the future architecture:
 - MoveIt2 can be used for planning and trajectory validation.
 - RViz2 can be used for visualization and manual inspection.
 
-This distinction is important because the future architecture should separate motion planning from robot execution.
+This distinction is important because the future architecture should separate motion
+planning from robot execution.
 
 ## Environment
 
@@ -144,9 +147,8 @@ Keep this terminal open while performing the validation.
 
 Using the MoveIt2 interface in RViz2:
 
-1. Select the available planning group.
-2. Move the interactive marker or set a valid target.
-3. Click `Plan`.
+1. Select the available planning group. 2. Move the interactive marker or set a valid
+target. 3. Click `Plan`.
 
 ### Expected Result
 
@@ -160,8 +162,8 @@ The planned trajectory should be visible in RViz2.
 
 Using the MoveIt2 interface in RViz2:
 
-1. After a valid plan is generated, click `Execute`.
-2. Observe the robot motion in RViz2.
+1. After a valid plan is generated, click `Execute`. 2. Observe the robot motion in
+RViz2.
 
 ### Expected Result
 
@@ -189,7 +191,8 @@ ros2 node list
 
 ### Expected Result
 
-The output should include active nodes related to MoveIt2, robot state publishing, controllers, and Doosan.
+The output should include active nodes related to MoveIt2, robot state publishing,
+controllers, and Doosan.
 
 ---
 
@@ -201,7 +204,8 @@ ros2 topic list
 
 ### Expected Result
 
-The output should include active topics related to robot state, planning, transforms, and controllers.
+The output should include active topics related to robot state, planning, transforms,
+and controllers.
 
 Expected examples may include:
 
@@ -233,11 +237,13 @@ Expected example:
 
 The experiment was completed successfully.
 
-MoveIt2 launched correctly with the Doosan `m1013` in virtual mode, and RViz2 opened with the MoveIt2 MotionPlanning plugin available for validation.
+MoveIt2 launched correctly with the Doosan `m1013` in virtual mode, and RViz2 opened
+with the MoveIt2 MotionPlanning plugin available for validation.
 
 Validated observations:
 
-- The MoveIt2 launch file `dsr_bringup2_moveit.launch.py` was available and accepted the expected launch arguments.
+- The MoveIt2 launch file `dsr_bringup2_moveit.launch.py` was available and accepted the
+  expected launch arguments.
 - The Doosan `m1013` model appeared correctly in RViz2.
 - The MoveIt2 MotionPlanning plugin was available in RViz2.
 - A valid planning group was available for the robot.
@@ -246,7 +252,8 @@ Validated observations:
 - The planned trajectory executed successfully in virtual mode.
 - ROS 2 nodes, topics, and Doosan services were available during the MoveIt2 session.
 
-No blocking warnings, errors, or planning limitations were identified during this validation.
+No blocking warnings, errors, or planning limitations were identified during this
+validation.
 
 ## Evidence
 
@@ -267,9 +274,12 @@ Suggested evidence:
 
 ## Conclusion
 
-The experiment confirms that MoveIt2 can be used as a planning and trajectory execution layer for the Doosan `m1013` in the local ROS 2 Jazzy environment.
+The experiment confirms that MoveIt2 can be used as a planning and trajectory execution
+layer for the Doosan `m1013` in the local ROS 2 Jazzy environment.
 
-This validates the role of MoveIt2 as a higher-level planning component, while the previously validated Doosan ROS 2 services remain suitable for direct service-based motion experiments.
+This validates the role of MoveIt2 as a higher-level planning component, while the
+previously validated Doosan ROS 2 services remain suitable for direct service-based
+motion experiments.
 
 ## Next Step
 
@@ -279,4 +289,5 @@ The next recommended experiment is:
 EXP-0006-gazebo-simulation-validation.md
 ```
 
-The goal will be to validate the Gazebo simulation flow and clarify the role of Gazebo compared with RViz2 and MoveIt2.
+The goal will be to validate the Gazebo simulation flow and clarify the role of Gazebo
+compared with RViz2 and MoveIt2.

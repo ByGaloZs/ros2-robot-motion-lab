@@ -2,7 +2,8 @@
 
 ## Purpose of This Section
 
-Collect working notes about the modular architecture and design decisions for the future TFM architecture chapter.
+Collect working notes about the modular architecture and design decisions for the future
+TFM architecture chapter.
 
 ## Key Ideas
 

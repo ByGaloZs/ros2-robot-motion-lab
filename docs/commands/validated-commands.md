@@ -1,8 +1,10 @@
 # Validated Commands
 
-This document records the command catalog used to validate the current ROS 2 robot motion lab environment.
+This document records the command catalog used to validate the current ROS 2 robot
+motion lab environment.
 
-The goal is to keep a reliable list of commands that are useful, reproducible, and aligned with the current lab setup.
+The goal is to keep a reliable list of commands that are useful, reproducible, and
+aligned with the current lab setup.
 
 ## Scope
 
@@ -88,7 +90,8 @@ git status
 
 ### Expected Result
 
-Git should show the current branch and whether there are modified, staged, or untracked files.
+Git should show the current branch and whether there are modified, staged, or untracked
+files.
 
 Example of a clean repository:
 
@@ -182,7 +185,8 @@ If the output is empty, ROS 2 has not been sourced in the current terminal sessi
 
 ### Purpose
 
-Verify that the `ros2` command is available in the terminal and identify where it is loaded from.
+Verify that the `ros2` command is available in the terminal and identify where it is
+loaded from.
 
 ### Command
 
@@ -280,7 +284,8 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 An empty table is valid when no containers are currently running.
 
-If this command fails with a permission error, the current user may not be correctly added to the `docker` group.
+If this command fails with a permission error, the current user may not be correctly
+added to the `docker` group.
 
 ---
 
@@ -412,7 +417,8 @@ The command should complete without printing errors.
 
 ### Notes
 
-This command makes packages such as `dsr_bringup2`, `dsr_msgs2`, `dsr_controller2`, `dsr_description2`, `dsr_moveit2`, and related packages available to the ROS 2 CLI.
+This command makes packages such as `dsr_bringup2`, `dsr_msgs2`, `dsr_controller2`,
+`dsr_description2`, `dsr_moveit2`, and related packages available to the ROS 2 CLI.
 
 ---
 
@@ -582,7 +588,8 @@ Ctrl+C
 
 ### Purpose
 
-Check whether an emulator-related Docker container is running after launching Doosan in virtual mode.
+Check whether an emulator-related Docker container is running after launching Doosan in
+virtual mode.
 
 ### Command
 
@@ -684,7 +691,8 @@ Expected namespace:
 
 ### Notes
 
-If there is no output, the Doosan stack may not be running or the namespace may be different.
+If there is no output, the Doosan stack may not be running or the namespace may be
+different.
 
 ---
 
@@ -706,7 +714,8 @@ ROS 2 should print active services.
 
 ### Notes
 
-This command is only useful for Doosan validation after the Doosan virtual stack is running.
+This command is only useful for Doosan validation after the Doosan virtual stack is
+running.
 
 ---
 
@@ -734,7 +743,8 @@ Expected example:
 
 ### Notes
 
-If this command returns no output, verify that the Doosan virtual stack is running and that the workspace has been sourced.
+If this command returns no output, verify that the Doosan virtual stack is running and
+that the workspace has been sourced.
 
 ---
 
@@ -822,7 +832,8 @@ If `/joint_states` is namespaced differently, inspect the topic list first.
 
 These commands validate that Doosan service interfaces are available.
 
-They do not require the robot stack to be running if the Doosan workspace has already been sourced.
+They do not require the robot stack to be running if the Doosan workspace has already
+been sourced.
 
 ## List available Doosan interfaces
 
@@ -982,7 +993,8 @@ RViz2 should open and display the Doosan `m1013`.
 
 This command also starts the Doosan virtual stack.
 
-Keep the launch terminal open while inspecting nodes, topics, and services from another terminal.
+Keep the launch terminal open while inspecting nodes, topics, and services from another
+terminal.
 
 ---
 
@@ -1142,7 +1154,8 @@ ros2 launch dsr_bringup2 dsr_bringup2_gazebo.launch.py mode:=virtual host:=127.0
 
 ### Expected Result
 
-Gazebo should open with the Doosan `m1013`, and RViz2 should also open if the launch configuration supports `gui:=true`.
+Gazebo should open with the Doosan `m1013`, and RViz2 should also open if the launch
+configuration supports `gui:=true`.
 
 ### Notes
 
@@ -1160,7 +1173,8 @@ Use them only when the robot is running in virtual mode.
 
 ### Purpose
 
-Send a small relative joint motion command using the official Doosan `MoveJoint` service.
+Send a small relative joint motion command using the official Doosan `MoveJoint`
+service.
 
 ### Command
 
@@ -1198,7 +1212,8 @@ The movement is intentionally small for safer validation in virtual mode.
 
 ### Purpose
 
-Return the robot approximately to the previous joint position after the small relative motion test.
+Return the robot approximately to the previous joint position after the small relative
+motion test.
 
 ### Command
 
@@ -1228,7 +1243,8 @@ Use this after the previous relative movement test.
 
 ### Purpose
 
-Send an absolute joint target to the Doosan `m1013` using the official `MoveJoint` service.
+Send an absolute joint target to the Doosan `m1013` using the official `MoveJoint`
+service.
 
 ### Command
 

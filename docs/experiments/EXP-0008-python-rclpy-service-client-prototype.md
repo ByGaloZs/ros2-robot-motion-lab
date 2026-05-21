@@ -6,13 +6,15 @@ Validated
 
 ## Objective
 
-Validate that a minimal Python client can call the official Doosan ROS 2 `MoveJoint` service using `rclpy`.
+Validate that a minimal Python client can call the official Doosan ROS 2 `MoveJoint`
+service using `rclpy`.
 
 ## Context
 
 Previous experiments validated motion commands using the ROS 2 CLI.
 
-This experiment creates the first bridge between command-line validation and custom software development.
+This experiment creates the first bridge between command-line validation and custom
+software development.
 
 The goal is not to create the final ROS 2 package yet.
 
@@ -25,7 +27,8 @@ The goal is to validate that Python can:
 - send a request;
 - receive and inspect the response.
 
-This experiment is the technical starting point for the future motion client and adapter layers:
+This experiment is the technical starting point for the future motion client and adapter
+layers:
 
 ```text
 robot_motion_client
@@ -106,7 +109,8 @@ ros2 launch dsr_bringup2 dsr_bringup2_rviz.launch.py mode:=virtual host:=127.0.0
 
 ### Expected Result
 
-The Doosan virtual stack should launch successfully with RViz2 and the Doosan `m1013` model.
+The Doosan virtual stack should launch successfully with RViz2 and the Doosan `m1013`
+model.
 
 Keep this terminal open while the Python client is executed from another terminal.
 
@@ -280,19 +284,24 @@ or an equivalent successful response.
 
 The experiment was completed successfully.
 
-The Python prototype was created under the lab repository and executed after sourcing the ROS 2 Jazzy environment and the official Doosan workspace.
+The Python prototype was created under the lab repository and executed after sourcing
+the ROS 2 Jazzy environment and the official Doosan workspace.
 
 Validated observations:
 
 - Python imported `rclpy` successfully after the ROS 2 environment was sourced.
-- Python imported `MoveJoint` from `dsr_msgs2.srv` successfully after the Doosan workspace was sourced.
+- Python imported `MoveJoint` from `dsr_msgs2.srv` successfully after the Doosan
+  workspace was sourced.
 - The client node initialized correctly using `rclpy`.
 - The client detected the `/dsr01/dsr_controller2/motion/move_joint` service.
 - The prototype sent a `MoveJoint` request successfully.
 - The service response returned a successful result.
 - The robot executed the requested joint motion in virtual mode.
 
-An initial import failure confirmed that the lab repository does not provide ROS 2 or Doosan Python interfaces by itself. The script depends on the active terminal environment being configured with `source /opt/ros/jazzy/setup.bash` and `source /home/galozs-dev/doosan_ws/install/setup.bash`.
+An initial import failure confirmed that the lab repository does not provide ROS 2 or
+Doosan Python interfaces by itself. The script depends on the active terminal
+environment being configured with `source /opt/ros/jazzy/setup.bash` and `source
+/home/galozs-dev/doosan_ws/install/setup.bash`.
 
 ## Evidence
 
@@ -311,9 +320,13 @@ Suggested evidence:
 
 ## Conclusion
 
-The experiment confirms that Python can directly communicate with the official Doosan ROS 2 `MoveJoint` service using `rclpy`.
+The experiment confirms that Python can directly communicate with the official Doosan
+ROS 2 `MoveJoint` service using `rclpy`.
 
-This validates the basic software pattern required for a future custom motion client: source the ROS 2 and Doosan environments, initialize a Python ROS 2 node, import the official service type, create a service client, send a request, and inspect the response.
+This validates the basic software pattern required for a future custom motion client:
+source the ROS 2 and Doosan environments, initialize a Python ROS 2 node, import the
+official service type, create a service client, send a request, and inspect the
+response.
 
 This provides the technical basis for creating future ROS 2 package layers such as:
 
@@ -324,7 +337,8 @@ doosan_motion_adapter
 
 ## Next Step
 
-After this experiment, the next phase is to create the initial ROS 2 package structure under:
+After this experiment, the next phase is to create the initial ROS 2 package structure
+under:
 
 ```text
 ros2_packages/
@@ -337,7 +351,8 @@ robot_motion_client
 doosan_motion_adapter
 ```
 
-The first implementation should keep general motion client logic separate from the Doosan-specific adapter for:
+The first implementation should keep general motion client logic separate from the
+Doosan-specific adapter for:
 
 ```text
 /dsr01/dsr_controller2/motion/move_joint

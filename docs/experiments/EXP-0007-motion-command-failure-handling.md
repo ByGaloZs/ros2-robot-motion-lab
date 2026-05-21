@@ -6,13 +6,16 @@ Validated
 
 ## Objective
 
-Validate how the Doosan ROS 2 motion services behave when receiving invalid, incomplete, or unsafe motion command requests.
+Validate how the Doosan ROS 2 motion services behave when receiving invalid, incomplete,
+or unsafe motion command requests.
 
 ## Context
 
-Before building a custom Python motion client, it is important to understand how service calls fail.
+Before building a custom Python motion client, it is important to understand how service
+calls fail.
 
-A future robot motion client and Doosan adapter should not only send valid requests. They should also handle:
+A future robot motion client and Doosan adapter should not only send valid requests.
+They should also handle:
 
 - invalid service types;
 - incorrect field names;
@@ -21,7 +24,8 @@ A future robot motion client and Doosan adapter should not only send valid reque
 - unavailable services;
 - failed service responses.
 
-This experiment helps identify what kind of errors are produced by the ROS 2 CLI, the Doosan service interface, and the active controller stack.
+This experiment helps identify what kind of errors are produced by the ROS 2 CLI, the
+Doosan service interface, and the active controller stack.
 
 ## Environment
 
@@ -84,7 +88,8 @@ ros2 launch dsr_bringup2 dsr_bringup2_rviz.launch.py mode:=virtual host:=127.0.0
 
 ### Expected Result
 
-The Doosan virtual stack should launch successfully with RViz2 and the Doosan `m1013` model.
+The Doosan virtual stack should launch successfully with RViz2 and the Doosan `m1013`
+model.
 
 Keep this terminal open while the experiment is executed from another terminal.
 
@@ -263,17 +268,23 @@ or an equivalent successful response.
 
 The experiment was completed successfully.
 
-The Doosan virtual stack remained available in virtual mode while invalid and recovery motion commands were tested through the ROS 2 CLI.
+The Doosan virtual stack remained available in virtual mode while invalid and recovery
+motion commands were tested through the ROS 2 CLI.
 
 Validated observations:
 
-- The valid `MoveJoint` service path was confirmed as `/dsr01/dsr_controller2/motion/move_joint`.
+- The valid `MoveJoint` service path was confirmed as
+  `/dsr01/dsr_controller2/motion/move_joint`.
 - The valid service type was confirmed as `dsr_msgs2/srv/MoveJoint`.
-- Invalid service paths did not reach the controller because the target service was not available in the ROS 2 graph.
+- Invalid service paths did not reach the controller because the target service was not
+  available in the ROS 2 graph.
 - Wrong service types were rejected before a valid motion request could be executed.
-- Incomplete or malformed requests were rejected by the ROS 2 CLI or service request validation before producing a successful motion command.
-- Invalid motion parameters did not provide a valid successful motion baseline and must be handled defensively by future clients.
-- A safe recovery command succeeded after the failure cases, confirming that the service remained usable.
+- Incomplete or malformed requests were rejected by the ROS 2 CLI or service request
+  validation before producing a successful motion command.
+- Invalid motion parameters did not provide a valid successful motion baseline and must
+  be handled defensively by future clients.
+- A safe recovery command succeeded after the failure cases, confirming that the service
+  remained usable.
 
 | Failure Case | Expected Failure | Actual Result | Notes |
 |---|---|---|---|
@@ -301,9 +312,13 @@ Suggested evidence:
 
 ## Conclusion
 
-The experiment confirms that a future Python client must validate service availability, service type, request shape, and motion parameters before sending commands to the Doosan controller.
+The experiment confirms that a future Python client must validate service availability,
+service type, request shape, and motion parameters before sending commands to the Doosan
+controller.
 
-The recovery command also confirms that failed or rejected requests in virtual mode do not necessarily leave the service unusable, but client code should still handle failures explicitly and verify the robot state before continuing with additional motion commands.
+The recovery command also confirms that failed or rejected requests in virtual mode do
+not necessarily leave the service unusable, but client code should still handle failures
+explicitly and verify the robot state before continuing with additional motion commands.
 
 ## Next Step
 

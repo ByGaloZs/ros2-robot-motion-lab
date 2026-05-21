@@ -1,8 +1,10 @@
 # Documentation Templates
 
-This folder contains reusable templates for keeping repository documentation consistent from the beginning.
+This folder contains reusable templates for keeping repository documentation consistent
+from the beginning.
 
-Use these templates when adding new architecture decisions, experiments, implementation notes, or thesis working notes.
+Use these templates when adding new architecture decisions, experiments, implementation
+notes, or thesis working notes.
 
 ## Index
 

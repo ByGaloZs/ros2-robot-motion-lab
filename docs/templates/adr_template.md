@@ -6,8 +6,7 @@ Proposed | Accepted | Superseded
 
 ## Context
 
-What is the technical context?
-What problem or uncertainty triggered this decision?
+What is the technical context? What problem or uncertainty triggered this decision?
 
 ## Decision
 

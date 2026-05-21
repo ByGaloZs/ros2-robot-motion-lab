@@ -1,6 +1,7 @@
 # Context
 
-This folder stores project context, current state, thesis context, and environment status for the ROS 2 robot motion lab.
+This folder stores project context, current state, thesis context, and environment
+status for the ROS 2 robot motion lab.
 
 ## Index
 

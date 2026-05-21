@@ -6,7 +6,10 @@ Accepted
 
 ## Context
 
-The project needs a modular ROS 2 architecture for trajectory generation, planning, and execution. Before integrating with ROS 2, MoveIt2, Gazebo, or Doosan-specific services, the project needs to validate whether palletizing target poses can be generated deterministically from simple geometric inputs.
+The project needs a modular ROS 2 architecture for trajectory generation, planning, and
+execution. Before integrating with ROS 2, MoveIt2, Gazebo, or Doosan-specific services,
+the project needs to validate whether palletizing target poses can be generated
+deterministically from simple geometric inputs.
 
 ## Decision
 
@@ -14,7 +17,9 @@ The first implementation module will be `pallet_layout_core`.
 
 ## Rationale
 
-Starting with `pallet_layout_core` validates the geometric layer before adding robot execution complexity. It also creates a stable data source for later clients, adapters, dashboard previews, and experiments.
+Starting with `pallet_layout_core` validates the geometric layer before adding robot
+execution complexity. It also creates a stable data source for later clients, adapters,
+dashboard previews, and experiments.
 
 ## Consequences
 
@@ -30,4 +35,5 @@ Starting with `pallet_layout_core` validates the geometric layer before adding r
 
 ## Future Revision
 
-This decision may be revisited after `pallet_layout_core v0.1` produces stable layout JSON and unit tests demonstrate predictable behavior.
+This decision may be revisited after `pallet_layout_core v0.1` produces stable layout
+JSON and unit tests demonstrate predictable behavior.

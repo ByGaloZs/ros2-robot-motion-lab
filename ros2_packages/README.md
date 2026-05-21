@@ -2,7 +2,8 @@
 
 ## Purpose
 
-This directory contains placeholders for future custom modules and ROS 2 packages created specifically for this lab.
+This directory contains placeholders for future custom modules and ROS 2 packages
+created specifically for this lab.
 
 ## Current Status
 
@@ -23,7 +24,8 @@ robot_motion_client    -> generic motion request and execution interface
 doosan_motion_adapter  -> Doosan-specific ROS 2 adapter
 ```
 
-`pallet_layout_core` is the next implementation target and should be pure Python at first.
+`pallet_layout_core` is the next implementation target and should be pure Python at
+first.
 
 ## Future Direction
 
@@ -35,6 +37,8 @@ robot_motion_client
 doosan_motion_adapter
 ```
 
-These package folders are placeholders. Implementation should only start after the relevant responsibilities, interfaces, commands, and expected behavior are documented.
+These package folders are placeholders. Implementation should only start after the
+relevant responsibilities, interfaces, commands, and expected behavior are documented.
 
-Do not create `setup.py`, `package.xml`, source code, nodes, launch files, or package dependencies until implementation is explicitly requested.
+Do not create `setup.py`, `package.xml`, source code, nodes, launch files, or package
+dependencies until implementation is explicitly requested.

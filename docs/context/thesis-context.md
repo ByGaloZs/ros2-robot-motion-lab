@@ -2,13 +2,18 @@
 
 ## Objective
 
-Design, implement, and evaluate a modular ROS 2-based architecture for robotic trajectory generation, planning, and execution, using a Doosan robot as the experimental validation platform.
+Design, implement, and evaluate a modular ROS 2-based architecture for robotic
+trajectory generation, planning, and execution, using a Doosan robot as the experimental
+validation platform.
 
 ## Scope
 
-This repository supports preparation for a master's thesis, but it is not intended to be only a Doosan demo.
+This repository supports preparation for a master's thesis, but it is not intended to be
+only a Doosan demo.
 
-Doosan Robotics ROS 2 and the Doosan `m1013` provide the current experimental validation platform. The core contribution should be the modular software architecture, not a robot-specific command wrapper.
+Doosan Robotics ROS 2 and the Doosan `m1013` provide the current experimental validation
+platform. The core contribution should be the modular software architecture, not a
+robot-specific command wrapper.
 
 ## Architectural Separation
 
@@ -23,7 +28,9 @@ The architecture should separate:
 
 ## Candidate Use Case
 
-Adaptive robotic palletizing is a possible future use case because it requires trajectory generation, planning, execution, and validation against changing task constraints.
+Adaptive robotic palletizing is a possible future use case because it requires
+trajectory generation, planning, execution, and validation against changing task
+constraints.
 
 ## Validation Tools
 

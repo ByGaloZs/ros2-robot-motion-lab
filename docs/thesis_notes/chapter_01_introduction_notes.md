@@ -2,13 +2,17 @@
 
 ## Purpose of This Section
 
-Collect working notes about the project problem, motivation, and context for the future TFM introduction.
+Collect working notes about the project problem, motivation, and context for the future
+TFM introduction.
 
 ## Key Ideas
 
-- Modular robot motion software should separate task generation, planning, execution, and robot-specific communication.
-- Doosan Robotics provides the current validation platform, but the architecture should remain reusable.
-- Palletizing is a practical candidate use case for validating target pose generation and execution flow.
+- Modular robot motion software should separate task generation, planning, execution,
+  and robot-specific communication.
+- Doosan Robotics provides the current validation platform, but the architecture should
+  remain reusable.
+- Palletizing is a practical candidate use case for validating target pose generation
+  and execution flow.
 
 ## Technical Evidence from Repository
 

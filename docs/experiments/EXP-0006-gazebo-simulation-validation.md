@@ -6,7 +6,8 @@ Validated
 
 ## Objective
 
-Validate that Gazebo can launch and simulate the Doosan `m1013` in the local ROS 2 Jazzy environment.
+Validate that Gazebo can launch and simulate the Doosan `m1013` in the local ROS 2 Jazzy
+environment.
 
 ## Context
 
@@ -16,9 +17,11 @@ RViz2, MoveIt2, and Gazebo serve different purposes:
 - MoveIt2 is used for motion planning.
 - Gazebo is used for simulation.
 
-This experiment validates the Gazebo layer and helps clarify how simulation fits into the future architecture.
+This experiment validates the Gazebo layer and helps clarify how simulation fits into
+the future architecture.
 
-The result of this experiment will help decide whether Gazebo should be used as part of future validation workflows for motion planning, execution, or environment interaction.
+The result of this experiment will help decide whether Gazebo should be used as part of
+future validation workflows for motion planning, execution, or environment interaction.
 
 ## Environment
 
@@ -146,7 +149,8 @@ ros2 launch dsr_bringup2 dsr_bringup2_gazebo.launch.py mode:=virtual host:=127.0
 
 Gazebo should launch successfully and load the Doosan `m1013` robot model.
 
-The terminal should remain active while the inspection commands are executed from another terminal.
+The terminal should remain active while the inspection commands are executed from
+another terminal.
 
 ---
 
@@ -170,7 +174,8 @@ ros2 node list
 
 ### Expected Result
 
-The output should include active nodes related to Gazebo, robot state, controllers, and Doosan.
+The output should include active nodes related to Gazebo, robot state, controllers, and
+Doosan.
 
 ---
 
@@ -257,7 +262,9 @@ If supported by the launch configuration, RViz2 may also open.
 
 The experiment was completed successfully.
 
-Gazebo launched correctly with the Doosan `m1013` in the local ROS 2 Jazzy environment. The simulated robot loaded successfully and exposed the expected ROS 2 graph information for inspection.
+Gazebo launched correctly with the Doosan `m1013` in the local ROS 2 Jazzy environment.
+The simulated robot loaded successfully and exposed the expected ROS 2 graph information
+for inspection.
 
 Validated observations:
 
@@ -290,9 +297,13 @@ Suggested evidence:
 
 ## Conclusion
 
-The experiment confirms that Gazebo can be used as a simulation layer for the Doosan `m1013` in the local ROS 2 Jazzy environment.
+The experiment confirms that Gazebo can be used as a simulation layer for the Doosan
+`m1013` in the local ROS 2 Jazzy environment.
 
-This result clarifies the practical separation between the main tools: RViz2 is useful for visualization, MoveIt2 is useful for planning, and Gazebo is useful for simulation. Gazebo can therefore be used in future experiments that require a simulated robot environment beyond visualization or trajectory planning alone.
+This result clarifies the practical separation between the main tools: RViz2 is useful
+for visualization, MoveIt2 is useful for planning, and Gazebo is useful for simulation.
+Gazebo can therefore be used in future experiments that require a simulated robot
+environment beyond visualization or trajectory planning alone.
 
 ## Next Step
 
@@ -302,4 +313,5 @@ The next recommended experiment is:
 EXP-0007-motion-command-failure-handling.md
 ```
 
-The goal will be to understand how the Doosan ROS 2 services behave when invalid or incomplete motion commands are sent.
+The goal will be to understand how the Doosan ROS 2 services behave when invalid or
+incomplete motion commands are sent.

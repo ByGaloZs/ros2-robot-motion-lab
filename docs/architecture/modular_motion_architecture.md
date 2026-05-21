@@ -2,7 +2,9 @@
 
 ## Purpose
 
-The goal is to separate robot-agnostic motion concepts from robot-specific execution so that layout generation, motion requests, and vendor-specific communication can evolve independently.
+The goal is to separate robot-agnostic motion concepts from robot-specific execution so
+that layout generation, motion requests, and vendor-specific communication can evolve
+independently.
 
 ## Architecture Overview
 
@@ -29,7 +31,8 @@ This module will contain pure layout logic:
 - Target pose generation
 - JSON export
 
-It must remain robot-agnostic and should not depend on Doosan or ROS 2 execution details.
+It must remain robot-agnostic and should not depend on Doosan or ROS 2 execution
+details.
 
 ### `robot_motion_client`
 
@@ -58,7 +61,8 @@ This future app will visualize:
 - Box positions
 - Target poses
 
-It should be used first as a validation tool before sending generated poses to the robot.
+It should be used first as a validation tool before sending generated poses to the
+robot.
 
 ## Design Principle
 

@@ -6,13 +6,16 @@ Validated
 
 ## Objective
 
-Map the available Doosan ROS 2 packages, services, and interfaces exposed through `dsr_msgs2` and the active Doosan ROS 2 stack.
+Map the available Doosan ROS 2 packages, services, and interfaces exposed through
+`dsr_msgs2` and the active Doosan ROS 2 stack.
 
-This experiment focuses on understanding what service interfaces are available before implementing a custom ROS 2 client.
+This experiment focuses on understanding what service interfaces are available before
+implementing a custom ROS 2 client.
 
 ## Context
 
-The future Doosan adapter should communicate directly with official Doosan ROS 2 services while keeping the general motion client layer robot-agnostic.
+The future Doosan adapter should communicate directly with official Doosan ROS 2
+services while keeping the general motion client layer robot-agnostic.
 
 Before designing that adapter, it is necessary to identify:
 
@@ -253,19 +256,25 @@ dsr_msgs2/srv/MoveJoint
 
 The experiment was completed successfully.
 
-The Doosan ROS 2 packages were visible from the ROS 2 CLI after sourcing the Doosan workspace. The `dsr_msgs2` package was available and resolved to the Doosan workspace install path.
+The Doosan ROS 2 packages were visible from the ROS 2 CLI after sourcing the Doosan
+workspace. The `dsr_msgs2` package was available and resolved to the Doosan workspace
+install path.
 
 Validated observations:
 
 - Doosan-related packages were detected with `ros2 pkg list | grep dsr`.
 - The `dsr_msgs2` package was available.
 - Doosan message and service interfaces were listed through `ros2 interface list`.
-- Motion-related service interfaces were available, including `dsr_msgs2/srv/MoveJoint` and `dsr_msgs2/srv/MoveLine`.
-- The `MoveJoint` service definition was inspected successfully and exposed the expected request and response fields.
+- Motion-related service interfaces were available, including `dsr_msgs2/srv/MoveJoint`
+  and `dsr_msgs2/srv/MoveLine`.
+- The `MoveJoint` service definition was inspected successfully and exposed the expected
+  request and response fields.
 - The `MoveLine` service definition was inspected successfully.
-- After launching the Doosan virtual stack, active Doosan services were visible under the `/dsr01/dsr_controller2/` namespace.
+- After launching the Doosan virtual stack, active Doosan services were visible under
+  the `/dsr01/dsr_controller2/` namespace.
 - The active motion service `/dsr01/dsr_controller2/motion/move_joint` was available.
-- The service type for `/dsr01/dsr_controller2/motion/move_joint` was confirmed as `dsr_msgs2/srv/MoveJoint`.
+- The service type for `/dsr01/dsr_controller2/motion/move_joint` was confirmed as
+  `dsr_msgs2/srv/MoveJoint`.
 
 ## Evidence
 
@@ -285,9 +294,12 @@ Suggested evidence:
 
 ## Conclusion
 
-The experiment confirms that the Doosan ROS 2 service interfaces required for future custom client development are available through the official `dsr_msgs2` package.
+The experiment confirms that the Doosan ROS 2 service interfaces required for future
+custom client development are available through the official `dsr_msgs2` package.
 
-The validated `MoveJoint` service and the inspected `MoveLine` interface provide a clear baseline for implementing future direct service-based motion experiments without relying on high-level wrappers.
+The validated `MoveJoint` service and the inspected `MoveLine` interface provide a clear
+baseline for implementing future direct service-based motion experiments without relying
+on high-level wrappers.
 
 ## Next Step
 
@@ -297,4 +309,5 @@ The next recommended experiment is:
 EXP-0004-moveline-service-validation.md
 ```
 
-The goal will be to validate Cartesian linear motion using the official Doosan ROS 2 service interface.
+The goal will be to validate Cartesian linear motion using the official Doosan ROS 2
+service interface.

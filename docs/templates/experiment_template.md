@@ -29,9 +29,7 @@ What do we expect to happen?
 
 ## Procedure
 
-1. Step one.
-2. Step two.
-3. Step three.
+1. Step one. 2. Step two. 3. Step three.
 
 ## Expected Result
 
@@ -61,4 +59,5 @@ Additional observations.
 
 ## Impact on Architecture
 
-Explain whether the experiment affects the architecture, data model, integration strategy, or future implementation.
+Explain whether the experiment affects the architecture, data model, integration
+strategy, or future implementation.

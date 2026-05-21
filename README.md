@@ -2,9 +2,13 @@
 
 ## Purpose
 
-This repository is a general ROS 2 robot motion architecture lab focused on modular robot motion, trajectory planning, and execution.
+This repository is a general ROS 2 robot motion architecture lab focused on modular
+robot motion, trajectory planning, and execution.
 
-It is used to document validated commands, reproducible experiments, prototype scripts, and future package design for robot motion software. The repository also supports preparation for a future master's thesis / TFM, but it remains a practical engineering lab rather than a thesis manuscript.
+It is used to document validated commands, reproducible experiments, prototype scripts,
+and future package design for robot motion software. The repository also supports
+preparation for a future master's thesis / TFM, but it remains a practical engineering
+lab rather than a thesis manuscript.
 
 ## Current Experimental Platform
 
@@ -20,7 +24,8 @@ The current validation platform is:
 - Gazebo
 - Python / `rclpy`
 
-Doosan Robotics ROS 2 and the Doosan `m1013` are the current experimental validation platform. They are not intended to define the full scope of the repository.
+Doosan Robotics ROS 2 and the Doosan `m1013` are the current experimental validation
+platform. They are not intended to define the full scope of the repository.
 
 The validated Doosan workspace remains separate at:
 
@@ -64,19 +69,27 @@ ros2-robot-motion-lab/
 - `docs/commands/`: validated commands.
 - `reports/`: generated outputs and experiment evidence.
 
-The repository is intentionally structured to support future TFM writing. Experiments, ADRs, implementation notes, and generated outputs should be cross-referenced when relevant.
+The repository is intentionally structured to support future TFM writing. Experiments,
+ADRs, implementation notes, and generated outputs should be cross-referenced when
+relevant.
 
 ## Future Direction
 
-Future software should separate general robot motion logic from robot-specific communication.
+Future software should separate general robot motion logic from robot-specific
+communication.
 
 Planned conceptual layers:
 
 - `pallet_layout_core`: future pallet layout and trajectory generation logic.
-- `robot_motion_client`: general robot motion client layer for motion requests, validation, and execution flow.
-- `doosan_motion_adapter`: Doosan-specific adapter for official Doosan ROS 2 services and interfaces.
-- `pallet_layout_dashboard`: future application interface for pallet layout visualization and interaction.
+- `robot_motion_client`: general robot motion client layer for motion requests,
+  validation, and execution flow.
+- `doosan_motion_adapter`: Doosan-specific adapter for official Doosan ROS 2 services
+  and interfaces.
+- `pallet_layout_dashboard`: future application interface for pallet layout
+  visualization and interaction.
 
-Only the base folder structure exists. No ROS 2 package logic, nodes, or dashboard code has been implemented yet.
+Only the base folder structure exists. No ROS 2 package logic, nodes, or dashboard code
+has been implemented yet.
 
-The current next implementation target is `pallet_layout_core v0.1`, before the dashboard or Doosan-specific adapter.
+The current next implementation target is `pallet_layout_core v0.1`, before the
+dashboard or Doosan-specific adapter.

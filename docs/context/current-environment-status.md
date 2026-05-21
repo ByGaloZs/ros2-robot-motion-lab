@@ -8,7 +8,8 @@ Track the currently validated experimental environment for this ROS 2 robot moti
 
 This document describes the environment used for `ros2-robot-motion-lab`.
 
-Do not treat this repository as the validated official Doosan workspace. The official validated workspace remains separate at:
+Do not treat this repository as the validated official Doosan workspace. The official
+validated workspace remains separate at:
 
 ```text
 ~/doosan_ws
@@ -25,7 +26,8 @@ Do not treat this repository as the validated official Doosan workspace. The off
 - Planning: MoveIt2
 - Simulation: Gazebo
 - Python client library: `rclpy`
-- Repository phase: base architecture folders created after completing the initial experiment sequence
+- Repository phase: base architecture folders created after completing the initial
+  experiment sequence
 - ROS 2 package code in this repository: not implemented yet
 - Dashboard code in this repository: not implemented yet
 - Prototype scripts in this repository: one Python `rclpy` service client prototype
@@ -42,7 +44,9 @@ Do not treat this repository as the validated official Doosan workspace. The off
 
 ## Validation Status
 
-The initial experiment sequence validates the current Doosan-based experimental platform. These results support the broader ROS 2 robot motion architecture but should not force the general layer to become Doosan-specific.
+The initial experiment sequence validates the current Doosan-based experimental
+platform. These results support the broader ROS 2 robot motion architecture but should
+not force the general layer to become Doosan-specific.
 
 Validated areas include:
 
@@ -57,4 +61,5 @@ Validated areas include:
 
 ## Next Step
 
-Document the initial architecture boundaries before creating ROS 2 package code, nodes, or dashboard implementation.
+Document the initial architecture boundaries before creating ROS 2 package code, nodes,
+or dashboard implementation.

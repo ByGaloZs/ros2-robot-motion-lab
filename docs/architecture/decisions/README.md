@@ -1,8 +1,10 @@
 # Architecture Decisions
 
-This folder contains Architecture Decision Records (ADRs) for the TFM-ready modular ROS 2 robot motion architecture.
+This folder contains Architecture Decision Records (ADRs) for the TFM-ready modular ROS
+2 robot motion architecture.
 
-ADRs document important technical decisions, the context behind them, the trade-offs accepted, and when each decision should be revisited.
+ADRs document important technical decisions, the context behind them, the trade-offs
+accepted, and when each decision should be revisited.
 
 ## Index
 

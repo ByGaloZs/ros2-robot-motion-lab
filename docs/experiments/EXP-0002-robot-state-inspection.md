@@ -6,7 +6,8 @@ Validated
 
 ## Objective
 
-Validate how to inspect the current state of the Doosan `m1013` while the robot is running in virtual mode.
+Validate how to inspect the current state of the Doosan `m1013` while the robot is
+running in virtual mode.
 
 This experiment focuses on observing:
 
@@ -18,7 +19,8 @@ This experiment focuses on observing:
 
 ## Context
 
-Before building a custom motion client, it is important to understand how the robot exposes its current state through the ROS 2 graph.
+Before building a custom motion client, it is important to understand how the robot
+exposes its current state through the ROS 2 graph.
 
 This experiment does not send motion commands. It only inspects the active ROS 2 system.
 
@@ -90,9 +92,11 @@ ros2 launch dsr_bringup2 dsr_bringup2_rviz.launch.py mode:=virtual host:=127.0.0
 
 ### Expected Result
 
-The Doosan virtual stack should launch successfully with RViz2 and the Doosan `m1013` model.
+The Doosan virtual stack should launch successfully with RViz2 and the Doosan `m1013`
+model.
 
-The terminal should remain active while the inspection commands are executed from another terminal.
+The terminal should remain active while the inspection commands are executed from
+another terminal.
 
 ---
 
@@ -230,13 +234,16 @@ Expected example:
 
 The experiment was completed successfully.
 
-The Doosan virtual stack launched correctly in virtual mode and the ROS 2 graph exposed the expected runtime state interfaces for inspection.
+The Doosan virtual stack launched correctly in virtual mode and the ROS 2 graph exposed
+the expected runtime state interfaces for inspection.
 
 Validated observations:
 
 - Doosan-related ROS 2 nodes were visible in the active graph.
-- The joint state topic was available under the Doosan namespace as `/dsr01/joint_states`.
-- Joint state messages were published successfully and included the expected joint state fields.
+- The joint state topic was available under the Doosan namespace as
+  `/dsr01/joint_states`.
+- Joint state messages were published successfully and included the expected joint state
+  fields.
 - Transform-related topics were available, including `/tf` and `/tf_static`.
 - Doosan-related services were visible under the `/dsr01/dsr_controller2/` namespace.
 - The validated motion service `/dsr01/dsr_controller2/motion/move_joint` was present.
@@ -261,9 +268,12 @@ Suggested evidence:
 
 ## Conclusion
 
-The experiment confirms that the Doosan `m1013` virtual stack exposes enough runtime state information through the ROS 2 graph to support future custom clients and validation tools.
+The experiment confirms that the Doosan `m1013` virtual stack exposes enough runtime
+state information through the ROS 2 graph to support future custom clients and
+validation tools.
 
-The observed topics and services provide a practical baseline for mapping Doosan interfaces and preparing future experiments around direct service-based motion control.
+The observed topics and services provide a practical baseline for mapping Doosan
+interfaces and preparing future experiments around direct service-based motion control.
 
 ## Next Step
 
@@ -273,4 +283,5 @@ The next recommended experiment is:
 EXP-0003-doosan-services-and-interfaces-mapping.md
 ```
 
-The goal will be to map available Doosan service interfaces and identify which services are relevant for future custom motion clients.
+The goal will be to map available Doosan service interfaces and identify which services
+are relevant for future custom motion clients.

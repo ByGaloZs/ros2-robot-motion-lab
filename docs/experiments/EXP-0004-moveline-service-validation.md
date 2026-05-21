@@ -6,15 +6,18 @@ Validated
 
 ## Objective
 
-Validate that the Doosan `m1013` can execute a Cartesian linear motion command in virtual mode using the official ROS 2 `MoveLine` service.
+Validate that the Doosan `m1013` can execute a Cartesian linear motion command in
+virtual mode using the official ROS 2 `MoveLine` service.
 
 ## Context
 
 `MoveJoint` validates joint-space motion.
 
-For future trajectory planning, palletizing, or Cartesian path execution, it is also important to validate Cartesian motion.
+For future trajectory planning, palletizing, or Cartesian path execution, it is also
+important to validate Cartesian motion.
 
-This experiment verifies whether the robot can receive and execute a linear Cartesian motion using the official Doosan ROS 2 service interface.
+This experiment verifies whether the robot can receive and execute a linear Cartesian
+motion using the official Doosan ROS 2 service interface.
 
 ## Environment
 
@@ -83,7 +86,8 @@ ros2 launch dsr_bringup2 dsr_bringup2_rviz.launch.py mode:=virtual host:=127.0.0
 
 ### Expected Result
 
-The Doosan virtual stack should launch successfully with RViz2 and the Doosan `m1013` model.
+The Doosan virtual stack should launch successfully with RViz2 and the Doosan `m1013`
+model.
 
 Keep this terminal open while the experiment is executed from another terminal.
 
@@ -153,7 +157,8 @@ Document the actual request fields before executing the service call.
 
 ### Terminal B — Execute small Cartesian linear motion
 
-> Important: validate the exact `MoveLine` request structure before running this command. Adjust the fields if the local interface definition differs.
+> Important: validate the exact `MoveLine` request structure before running this
+> command. Adjust the fields if the local interface definition differs.
 
 ```bash
 ros2 service call /dsr01/dsr_controller2/motion/move_line dsr_msgs2/srv/MoveLine "{pos: [0.0, 0.0, -100.0, 0.0, 0.0, 0.0], vel: [20.0, 10.0], acc: [20.0, 10.0], time: 0.0, radius: 0.0, ref: 0, mode: 1, blend_type: 0, sync_type: 0}"
@@ -175,7 +180,8 @@ or an equivalent successful service response.
 
 ### Terminal B — Return from small Cartesian linear motion
 
-> Important: validate the exact `MoveLine` request structure before running this command. Adjust the fields if the local interface definition differs.
+> Important: validate the exact `MoveLine` request structure before running this
+> command. Adjust the fields if the local interface definition differs.
 
 ```bash
 ros2 service call /dsr01/dsr_controller2/motion/move_line dsr_msgs2/srv/MoveLine "{pos: [0.0, 0.0, 100.0, 0.0, 0.0, 0.0], vel: [20.0, 10.0], acc: [20.0, 10.0], time: 0.0, radius: 0.0, ref: 0, mode: 1, blend_type: 0, sync_type: 0}"
@@ -197,19 +203,22 @@ or an equivalent successful service response.
 
 The experiment was completed successfully.
 
-The Doosan virtual stack launched correctly in virtual mode and the Cartesian linear motion service was available in the ROS 2 graph.
+The Doosan virtual stack launched correctly in virtual mode and the Cartesian linear
+motion service was available in the ROS 2 graph.
 
 Validated observations:
 
 - The active line motion service path was `/dsr01/dsr_controller2/motion/move_line`.
 - The service type was confirmed as `dsr_msgs2/srv/MoveLine`.
 - The `MoveLine` service interface was inspected before executing the service call.
-- The request fields used for validation were `pos`, `vel`, `acc`, `time`, `radius`, `ref`, `mode`, `blend_type`, and `sync_type`.
+- The request fields used for validation were `pos`, `vel`, `acc`, `time`, `radius`,
+  `ref`, `mode`, `blend_type`, and `sync_type`.
 - The first Cartesian linear motion service call succeeded.
 - The robot motion was visible in RViz2 while running in virtual mode.
 - The return Cartesian linear motion service call also succeeded.
 
-Both service calls returned a successful response and the robot returned from the small Cartesian displacement as expected.
+Both service calls returned a successful response and the robot returned from the small
+Cartesian displacement as expected.
 
 ## Evidence
 
@@ -229,9 +238,12 @@ Suggested evidence:
 
 ## Conclusion
 
-The experiment confirms that Cartesian linear motion can be executed directly through the official Doosan ROS 2 `MoveLine` service in virtual mode.
+The experiment confirms that Cartesian linear motion can be executed directly through
+the official Doosan ROS 2 `MoveLine` service in virtual mode.
 
-This validates `dsr_msgs2/srv/MoveLine` as a suitable interface for future direct service-based Cartesian motion experiments and provides a baseline for later MoveIt2 planning validation.
+This validates `dsr_msgs2/srv/MoveLine` as a suitable interface for future direct
+service-based Cartesian motion experiments and provides a baseline for later MoveIt2
+planning validation.
 
 ## Next Step
 
