@@ -2,7 +2,7 @@
 
 ## Status
 
-Pending Validation
+Validated
 
 ## Objective
 
@@ -187,7 +187,7 @@ class MoveJointClient(Node):
 
     def send_relative_motion(self) -> bool:
         request = MoveJoint.Request()
-        request.pos = [0.0, 0.0, 2.0, 0.0, 0.0, 0.0]
+        request.pos = [0.0, 0.0, 90.0, 0.0, -90.0, 0.0]
         request.vel = 10.0
         request.acc = 10.0
         request.time = 0.0
@@ -277,16 +277,21 @@ or an equivalent successful response.
 
 ## Actual Result
 
-Pending validation.
+The experiment was completed successfully.
 
-After validation, document:
+The Python prototype was created under the lab repository and executed after sourcing the ROS 2 Jazzy environment and the official Doosan workspace.
 
-- whether Python imported `rclpy` successfully;
-- whether Python imported `MoveJoint` from `dsr_msgs2.srv`;
-- whether the client detected the service;
-- whether the request was sent successfully;
-- whether the response returned `success: true`;
-- whether the robot moved in RViz2.
+Validated observations:
+
+- Python imported `rclpy` successfully after the ROS 2 environment was sourced.
+- Python imported `MoveJoint` from `dsr_msgs2.srv` successfully after the Doosan workspace was sourced.
+- The client node initialized correctly using `rclpy`.
+- The client detected the `/dsr01/dsr_controller2/motion/move_joint` service.
+- The prototype sent a `MoveJoint` request successfully.
+- The service response returned a successful result.
+- The robot executed the requested joint motion in virtual mode.
+
+An initial import failure confirmed that the lab repository does not provide ROS 2 or Doosan Python interfaces by itself. The script depends on the active terminal environment being configured with `source /opt/ros/jazzy/setup.bash` and `source /home/galozs-dev/doosan_ws/install/setup.bash`.
 
 ## Evidence
 
@@ -305,11 +310,11 @@ Suggested evidence:
 
 ## Conclusion
 
-Pending validation.
+The experiment confirms that Python can directly communicate with the official Doosan ROS 2 `MoveJoint` service using `rclpy`.
 
-This experiment should confirm that Python can directly communicate with the official Doosan ROS 2 `MoveJoint` service using `rclpy`.
+This validates the basic software pattern required for a future custom motion client: source the ROS 2 and Doosan environments, initialize a Python ROS 2 node, import the official service type, create a service client, send a request, and inspect the response.
 
-This will provide the technical basis for creating a future ROS 2 package such as:
+This provides the technical basis for creating a future ROS 2 package such as:
 
 ```text
 doosan_motion_client
