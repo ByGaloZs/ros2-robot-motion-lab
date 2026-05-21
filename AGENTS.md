@@ -75,10 +75,16 @@ ros2-robot-motion-lab/
 ├── .gitignore
 ├── docs/
 │   ├── context/
+│   ├── architecture/
 │   ├── study/
 │   ├── experiments/
 │   └── commands/
 ├── ros2_packages/
+│   ├── pallet_layout_core/
+│   ├── robot_motion_client/
+│   └── doosan_motion_adapter/
+├── apps/
+│   └── pallet_layout_dashboard/
 ├── scripts/
 └── reports/
 ```
@@ -100,6 +106,10 @@ thesis-context.md
 ### `docs/study/`
 
 Use this directory for technical study notes about ROS 2, robot motion architecture, planning, simulation, and platform-specific interfaces.
+
+### `docs/architecture/`
+
+Use this directory for architecture boundaries, package responsibilities, data flow, and design decisions.
 
 ### `docs/experiments/`
 
@@ -125,7 +135,29 @@ Do not add commands unless they have a clear purpose and are known to be relevan
 
 Use this directory only for future custom ROS 2 packages created specifically for this lab.
 
+Current placeholders:
+
+```text
+pallet_layout_core
+robot_motion_client
+doosan_motion_adapter
+```
+
+These folders are placeholders only. Do not add ROS 2 package code, nodes, or business logic unless explicitly requested.
+
 Do not copy official Doosan packages into this directory.
+
+### `apps/`
+
+Use this directory for future application-level interfaces.
+
+Current placeholder:
+
+```text
+pallet_layout_dashboard
+```
+
+Do not add dashboard code unless explicitly requested.
 
 ### `scripts/`
 

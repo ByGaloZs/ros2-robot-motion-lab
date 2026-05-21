@@ -2,11 +2,11 @@
 
 ## Purpose
 
-This directory is reserved for future custom ROS 2 packages created specifically for this lab.
+This directory contains placeholders for future custom ROS 2 packages created specifically for this lab.
 
 ## Current Status
 
-No ROS 2 package code has been created in this repository yet.
+Base package folders exist, but no ROS 2 package code has been implemented yet.
 
 ## Rules
 
@@ -20,8 +20,9 @@ No ROS 2 package code has been created in this repository yet.
 Future package layers may be named:
 
 ```text
+pallet_layout_core
 robot_motion_client
 doosan_motion_adapter
 ```
 
-These packages should only be created after the relevant responsibilities, interfaces, commands, and expected behavior are documented.
+These package folders are placeholders. Implementation should only start after the relevant responsibilities, interfaces, commands, and expected behavior are documented.

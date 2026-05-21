@@ -25,16 +25,20 @@ Do not treat this repository as the validated official Doosan workspace. The off
 - Planning: MoveIt2
 - Simulation: Gazebo
 - Python client library: `rclpy`
-- Repository phase: completed initial experiment sequence
-- ROS 2 package code in this repository: not created yet
+- Repository phase: base architecture folders created after completing the initial experiment sequence
+- ROS 2 package code in this repository: not implemented yet
+- Dashboard code in this repository: not implemented yet
 - Prototype scripts in this repository: one Python `rclpy` service client prototype
 
 ## Repository Status
 
 - Documentation directories are present.
+- Architecture documentation directory is present.
 - Experiment documentation is present under `docs/experiments/`.
+- Base package folders are present under `ros2_packages/`.
+- Base application folder is present under `apps/`.
 - A prototype script is present under `scripts/prototypes/`.
-- `ros2_packages/` is intentionally empty except for its README placeholder.
+- Package and application folders contain placeholders only.
 
 ## Validation Status
 
@@ -53,4 +57,4 @@ Validated areas include:
 
 ## Next Step
 
-Define the minimal package structure for the future `robot_motion_client` and `doosan_motion_adapter` layers before creating ROS 2 package code.
+Document the initial architecture boundaries before creating ROS 2 package code, nodes, or dashboard implementation.
