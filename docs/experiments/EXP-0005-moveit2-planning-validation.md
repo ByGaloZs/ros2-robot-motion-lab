@@ -2,7 +2,7 @@
 
 ## Status
 
-Pending Validation
+Validated
 
 ## Objective
 
@@ -231,16 +231,22 @@ Expected example:
 
 ## Actual Result
 
-Pending validation.
+The experiment was completed successfully.
 
-After validation, document:
+MoveIt2 launched correctly with the Doosan `m1013` in virtual mode, and RViz2 opened with the MoveIt2 MotionPlanning plugin available for validation.
 
-- whether MoveIt2 launched successfully;
-- whether the Doosan `m1013` appeared correctly in RViz2;
-- whether planning worked;
-- whether execution worked;
-- any warnings or errors shown in the terminal;
-- any planning limitations observed.
+Validated observations:
+
+- The MoveIt2 launch file `dsr_bringup2_moveit.launch.py` was available and accepted the expected launch arguments.
+- The Doosan `m1013` model appeared correctly in RViz2.
+- The MoveIt2 MotionPlanning plugin was available in RViz2.
+- A valid planning group was available for the robot.
+- MoveIt2 generated a valid trajectory for the selected target.
+- The planned trajectory was visible in RViz2.
+- The planned trajectory executed successfully in virtual mode.
+- ROS 2 nodes, topics, and Doosan services were available during the MoveIt2 session.
+
+No blocking warnings, errors, or planning limitations were identified during this validation.
 
 ## Evidence
 
@@ -261,9 +267,9 @@ Suggested evidence:
 
 ## Conclusion
 
-Pending validation.
+The experiment confirms that MoveIt2 can be used as a planning and trajectory execution layer for the Doosan `m1013` in the local ROS 2 Jazzy environment.
 
-This experiment should confirm whether MoveIt2 can be used as a planning layer for the Doosan `m1013` in the local ROS 2 Jazzy environment.
+This validates the role of MoveIt2 as a higher-level planning component, while the previously validated Doosan ROS 2 services remain suitable for direct service-based motion experiments.
 
 ## Next Step
 
