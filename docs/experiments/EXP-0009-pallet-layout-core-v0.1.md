@@ -54,7 +54,8 @@ The module should generate:
 
 ## Actual Result
 
-To be completed after implementation.
+Scaffold started for `pallet_layout_core` v0.1. The experiment remains pending until
+tests, generated output, and review evidence are completed.
 
 ## Validation Criteria
 
@@ -67,7 +68,20 @@ To be completed after implementation.
 
 ## Evidence
 
-To be completed with links to generated JSON files, test results, or logs.
+Initial unit test command verified:
+
+```bash
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest ros2_packages/pallet_layout_core/tests -q
+```
+
+Observed result:
+
+```txt
+10 passed in 0.03s
+```
+
+This confirms that the initial `pallet_layout_core` test scaffold can run in isolation
+from ROS 2 pytest plugins.
 
 ## Result
 
@@ -77,6 +91,15 @@ Pending
 
 This experiment validates only geometric layout generation. It does not validate robot
 motion, trajectory planning, collision checking, or reachability.
+
+The first pytest execution without `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1` attempted to load
+ROS 2 Jazzy pytest plugins from the sourced ROS 2 environment.
+
+This was not a dependency issue in `pallet_layout_core`. It was caused by pytest plugin
+autoloading in a ROS 2-enabled shell.
+
+The selected test command disables external plugin autoloading to preserve the pure Python
+testing boundary of this module.
 
 ## Impact on Architecture
 

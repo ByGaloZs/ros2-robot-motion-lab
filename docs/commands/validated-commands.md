@@ -12,6 +12,7 @@ This document covers:
 
 - repository checks;
 - terminal environment checks;
+- Python virtual environment setup;
 - Docker checks;
 - Doosan workspace checks;
 - Doosan emulator and virtual mode launch commands;
@@ -156,6 +157,123 @@ Useful to verify recent documentation changes.
 ---
 
 # 2. Terminal Environment Commands
+
+## Activate repository Python virtual environment
+
+### Purpose
+
+Activate the repository-local Python virtual environment in the current terminal session.
+
+### Command
+
+```bash
+source .venv/bin/activate
+```
+
+### Expected Result
+
+The shell prompt should indicate that the `.venv` environment is active.
+
+### Notes
+
+Run this from the repository root before executing Python tools that depend on the local
+virtual environment.
+
+---
+
+## Upgrade Python packaging tool
+
+### Purpose
+
+Upgrade `pip` inside the active Python environment.
+
+### Command
+
+```bash
+python -m pip install --upgrade pip
+```
+
+### Expected Result
+
+`pip` should install or confirm the latest available version for the active environment.
+
+### Notes
+
+Run this after activating `.venv` when preparing the local Python development
+environment.
+
+---
+
+## Install pallet layout core in editable mode
+
+### Purpose
+
+Install the local `pallet_layout_core` package in editable mode for development.
+
+### Command
+
+```bash
+python -m pip install -e ros2_packages/pallet_layout_core
+```
+
+### Expected Result
+
+The package should be installed into the active Python environment, while changes made in
+the source directory remain immediately available.
+
+### Notes
+
+Run this from the repository root after activating `.venv`.
+
+---
+
+## Run `pallet_layout_core` Unit Tests Without ROS 2 Pytest Plugins
+
+### Command
+
+```bash
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest ros2_packages/pallet_layout_core/tests -q
+```
+
+### Context
+
+This command is used to run the unit tests for `pallet_layout_core` as a pure Python
+module.
+
+The development shell may have ROS 2 Jazzy sourced through `.bashrc`, which exposes ROS 2
+Python packages and pytest plugins such as `launch_testing`.
+
+When pytest plugin autoloading is enabled, pytest may attempt to load ROS 2 testing
+plugins even though `pallet_layout_core` does not depend on ROS 2.
+
+### Reason
+
+`pallet_layout_core` must remain robot-agnostic and independent from:
+
+- ROS 2.
+- Doosan Robotics.
+- MoveIt2.
+- Gazebo.
+- ROS 2 launch testing plugins.
+
+Disabling pytest plugin autoloading ensures that the unit tests validate only the pure
+Python package.
+
+### Validated Result
+
+```txt
+10 passed in 0.03s
+```
+
+### Notes
+
+Do not install extra packages such as `PyYAML` only to satisfy ROS 2 pytest plugins for
+this module.
+
+If a future package needs ROS 2 integration tests, those tests should be documented
+separately and executed with the ROS 2 test environment enabled.
+
+---
 
 ## Check active ROS 2 distribution
 

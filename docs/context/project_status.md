@@ -23,6 +23,9 @@ modular robot motion architecture that can later be validated using Doosan Robot
 - Defining the modular architecture.
 - Separating robot-agnostic motion concepts from Doosan-specific execution.
 - Preparing the future pallet layout generation pipeline.
+- Scaffold started for `pallet_layout_core` v0.1 as a pure Python module.
+- Verified the isolated unit test command for `pallet_layout_core` using
+  `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1` to avoid ROS 2 pytest plugin autoloading.
 - Keeping the repository aligned with the TFM direction.
 
 ## Next Steps
@@ -36,7 +39,6 @@ for visual validation.
 
 ## Not Started Yet
 
-- `pallet_layout_core` implementation.
 - `robot_motion_client` implementation.
 - `doosan_motion_adapter` implementation.
 - Dashboard implementation.

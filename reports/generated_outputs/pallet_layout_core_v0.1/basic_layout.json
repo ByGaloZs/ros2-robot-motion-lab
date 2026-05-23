@@ -1,0 +1,1113 @@
+{
+  "config": {
+    "box": {
+      "length": 300,
+      "width": 200,
+      "height": 150
+    },
+    "pallet": {
+      "length": 1200,
+      "width": 1000,
+      "height": 150
+    },
+    "layers": 3,
+    "pattern": "grid"
+  },
+  "layers": [
+    {
+      "layer_index": 0,
+      "slots": [
+        {
+          "slot_id": "L0_R0_C0",
+          "layer_index": 0,
+          "row_index": 0,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 100.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R0_C1",
+          "layer_index": 0,
+          "row_index": 0,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 100.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R0_C2",
+          "layer_index": 0,
+          "row_index": 0,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 100.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R0_C3",
+          "layer_index": 0,
+          "row_index": 0,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 100.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R1_C0",
+          "layer_index": 0,
+          "row_index": 1,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 300.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R1_C1",
+          "layer_index": 0,
+          "row_index": 1,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 300.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R1_C2",
+          "layer_index": 0,
+          "row_index": 1,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 300.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R1_C3",
+          "layer_index": 0,
+          "row_index": 1,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 300.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R2_C0",
+          "layer_index": 0,
+          "row_index": 2,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 500.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R2_C1",
+          "layer_index": 0,
+          "row_index": 2,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 500.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R2_C2",
+          "layer_index": 0,
+          "row_index": 2,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 500.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R2_C3",
+          "layer_index": 0,
+          "row_index": 2,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 500.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R3_C0",
+          "layer_index": 0,
+          "row_index": 3,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 700.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R3_C1",
+          "layer_index": 0,
+          "row_index": 3,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 700.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R3_C2",
+          "layer_index": 0,
+          "row_index": 3,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 700.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R3_C3",
+          "layer_index": 0,
+          "row_index": 3,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 700.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R4_C0",
+          "layer_index": 0,
+          "row_index": 4,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 900.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R4_C1",
+          "layer_index": 0,
+          "row_index": 4,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 900.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R4_C2",
+          "layer_index": 0,
+          "row_index": 4,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 900.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L0_R4_C3",
+          "layer_index": 0,
+          "row_index": 4,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 900.0,
+              "z": 225.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "layer_index": 1,
+      "slots": [
+        {
+          "slot_id": "L1_R0_C0",
+          "layer_index": 1,
+          "row_index": 0,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 100.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R0_C1",
+          "layer_index": 1,
+          "row_index": 0,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 100.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R0_C2",
+          "layer_index": 1,
+          "row_index": 0,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 100.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R0_C3",
+          "layer_index": 1,
+          "row_index": 0,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 100.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R1_C0",
+          "layer_index": 1,
+          "row_index": 1,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 300.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R1_C1",
+          "layer_index": 1,
+          "row_index": 1,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 300.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R1_C2",
+          "layer_index": 1,
+          "row_index": 1,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 300.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R1_C3",
+          "layer_index": 1,
+          "row_index": 1,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 300.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R2_C0",
+          "layer_index": 1,
+          "row_index": 2,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 500.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R2_C1",
+          "layer_index": 1,
+          "row_index": 2,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 500.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R2_C2",
+          "layer_index": 1,
+          "row_index": 2,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 500.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R2_C3",
+          "layer_index": 1,
+          "row_index": 2,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 500.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R3_C0",
+          "layer_index": 1,
+          "row_index": 3,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 700.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R3_C1",
+          "layer_index": 1,
+          "row_index": 3,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 700.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R3_C2",
+          "layer_index": 1,
+          "row_index": 3,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 700.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R3_C3",
+          "layer_index": 1,
+          "row_index": 3,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 700.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R4_C0",
+          "layer_index": 1,
+          "row_index": 4,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 900.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R4_C1",
+          "layer_index": 1,
+          "row_index": 4,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 900.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R4_C2",
+          "layer_index": 1,
+          "row_index": 4,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 900.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L1_R4_C3",
+          "layer_index": 1,
+          "row_index": 4,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 900.0,
+              "z": 375.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "layer_index": 2,
+      "slots": [
+        {
+          "slot_id": "L2_R0_C0",
+          "layer_index": 2,
+          "row_index": 0,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 100.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R0_C1",
+          "layer_index": 2,
+          "row_index": 0,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 100.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R0_C2",
+          "layer_index": 2,
+          "row_index": 0,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 100.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R0_C3",
+          "layer_index": 2,
+          "row_index": 0,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 100.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R1_C0",
+          "layer_index": 2,
+          "row_index": 1,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 300.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R1_C1",
+          "layer_index": 2,
+          "row_index": 1,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 300.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R1_C2",
+          "layer_index": 2,
+          "row_index": 1,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 300.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R1_C3",
+          "layer_index": 2,
+          "row_index": 1,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 300.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R2_C0",
+          "layer_index": 2,
+          "row_index": 2,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 500.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R2_C1",
+          "layer_index": 2,
+          "row_index": 2,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 500.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R2_C2",
+          "layer_index": 2,
+          "row_index": 2,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 500.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R2_C3",
+          "layer_index": 2,
+          "row_index": 2,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 500.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R3_C0",
+          "layer_index": 2,
+          "row_index": 3,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 700.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R3_C1",
+          "layer_index": 2,
+          "row_index": 3,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 700.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R3_C2",
+          "layer_index": 2,
+          "row_index": 3,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 700.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R3_C3",
+          "layer_index": 2,
+          "row_index": 3,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 700.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R4_C0",
+          "layer_index": 2,
+          "row_index": 4,
+          "column_index": 0,
+          "target_pose": {
+            "position": {
+              "x": 150.0,
+              "y": 900.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R4_C1",
+          "layer_index": 2,
+          "row_index": 4,
+          "column_index": 1,
+          "target_pose": {
+            "position": {
+              "x": 450.0,
+              "y": 900.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R4_C2",
+          "layer_index": 2,
+          "row_index": 4,
+          "column_index": 2,
+          "target_pose": {
+            "position": {
+              "x": 750.0,
+              "y": 900.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        },
+        {
+          "slot_id": "L2_R4_C3",
+          "layer_index": 2,
+          "row_index": 4,
+          "column_index": 3,
+          "target_pose": {
+            "position": {
+              "x": 1050.0,
+              "y": 900.0,
+              "z": 525.0
+            },
+            "orientation": {
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 0.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
