@@ -9,6 +9,7 @@ before implementation.
 
 - [Modular Motion Architecture](modular_motion_architecture.md)
 - [Architecture Decisions](decisions/)
+- [TFM Target Vision](../thesis_notes/tfm-thesis-definition.md)
 
 The `decisions/` folder contains Architecture Decision Records used to document
 important technical decisions, rationale, and trade-offs.

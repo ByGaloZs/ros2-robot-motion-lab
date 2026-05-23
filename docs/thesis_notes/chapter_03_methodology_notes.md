@@ -11,14 +11,20 @@ for the future TFM methodology chapter.
   integration points.
 - Preserve command evidence and experiment files as technical traceability.
 - Start with robot-agnostic layout generation before robot execution.
+- Clearly distinguish implemented modules, validated commands, planned layers, and future
+  integration work.
+- Evaluate the architecture using software engineering criteria such as maintainability,
+  modularity, traceability, extensibility, configurability, and separation of
+  responsibilities.
 
 ## Technical Evidence from Repository
 
 - `docs/experiments/experiment-log.md`
 - `docs/commands/validated-commands.md`
 - `docs/templates/experiment_template.md`
+- `docs/thesis_notes/tfm-thesis-definition.md`
 
 ## Pending Work
 
-- Define validation criteria for `pallet_layout_core v0.1`.
-- Decide how generated JSON outputs will be stored and referenced.
+- Complete validation evidence for `pallet_layout_core v0.1`.
+- Decide how generated JSON outputs will be versioned, stored, and referenced.

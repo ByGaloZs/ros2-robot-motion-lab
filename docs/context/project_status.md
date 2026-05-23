@@ -2,11 +2,10 @@
 
 ## Current Stage
 
-Repository architecture preparation before implementing custom ROS 2 packages.
+TFM architecture consolidation and first robot-agnostic module implementation.
 
-The project is currently focused on organizing the codebase and documentation for a
-modular robot motion architecture that can later be validated using Doosan Robotics ROS
-2.
+The project is currently focused on defining a modular robot motion architecture and
+validating the first robot-agnostic layer before implementing ROS 2 integration packages.
 
 ## Completed
 
@@ -16,6 +15,7 @@ modular robot motion architecture that can later be validated using Doosan Robot
 - Documentation folders created for architecture, context, experiments, commands, and
   study notes.
 - TFM context documented.
+- Canonical TFM thesis definition documented.
 - Initial experiment documentation started.
 
 ## In Progress
@@ -30,12 +30,14 @@ modular robot motion architecture that can later be validated using Doosan Robot
 
 ## Next Steps
 
-1. Implement the first version of `pallet_layout_core`. 2. Define data models for boxes,
-pallets, layers, slots, and target poses. 3. Generate static pallet layouts from JSON
-input. 4. Export calculated target poses as JSON. 5. Add unit tests for layout
-generation. 6. Later connect generated poses to `robot_motion_client`. 7. Later
-implement `doosan_motion_adapter`. 8. Later create a minimal `pallet_layout_dashboard`
-for visual validation.
+1. Complete and review `pallet_layout_core v0.1`.
+2. Document the `pallet_layout_core` walkthrough.
+3. Close EXP-0009 after validating tests, generated output, and review evidence.
+4. Define the intermediate representation schema.
+5. Define Dashboard/UI requirements.
+6. Define the `robot_motion_client` interface.
+7. Define the `doosan_motion_adapter` mapping.
+8. Define the first integration path from generated targets to motion requests.
 
 ## Not Started Yet
 

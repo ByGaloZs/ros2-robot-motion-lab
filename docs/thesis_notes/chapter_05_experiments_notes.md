@@ -12,14 +12,20 @@ TFM experiments chapter.
 - Future experiments should validate custom modules and integration boundaries.
 - Experiment evidence should link to generated outputs, logs, screenshots, or command
   records when relevant.
+- Experiments should support the thesis evaluation criteria, not only prove that a robot
+  command executed.
+- Doosan-specific experiments validate the chosen platform while preserving the broader
+  modular architecture objective.
 
 ## Technical Evidence from Repository
 
 - `docs/experiments/experiment-log.md`
 - `docs/experiments/EXP-0009-pallet-layout-core-v0.1.md`
 - `reports/generated_outputs/`
+- `docs/thesis_notes/tfm-thesis-definition.md`
 
 ## Pending Work
 
-- Complete `EXP-0009` after implementing `pallet_layout_core v0.1`.
+- Complete `EXP-0009` after validating `pallet_layout_core v0.1` tests, generated output,
+  and manual review evidence.
 - Add evidence files and references for each future experiment.

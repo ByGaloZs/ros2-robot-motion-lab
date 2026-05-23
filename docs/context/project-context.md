@@ -29,9 +29,13 @@ Do not modify, move, copy, or assume control over that workspace from this repos
 
 ## Current Phase
 
-The initial experiment sequence has been completed and documented. The base architecture
-folders now exist, but no ROS 2 package code, nodes, or dashboard implementation has
-been added.
+The initial Doosan-based experiment sequence has been completed and documented.
+
+`pallet_layout_core` is the first implemented architecture layer. It is a pure Python,
+robot-agnostic module and is not a ROS 2 package at this stage.
+
+No ROS 2 nodes, robot adapter implementation, motion client implementation, or dashboard
+implementation has been added yet.
 
 ## Future Package Direction
 
@@ -47,18 +51,22 @@ pallet_layout_dashboard
 Conceptual responsibilities:
 
 - `pallet_layout_core`: pallet layout and trajectory generation logic.
+- intermediate JSON representation: exchange format between generated targets,
+  visualization, motion clients, and adapters.
 - `robot_motion_client`: general motion request handling, validation flow, and execution
   orchestration.
 - `doosan_motion_adapter`: Doosan-specific communication through official Doosan ROS 2
   services and interfaces.
 - `pallet_layout_dashboard`: future application interface for layout visualization and
-  interaction.
+  interaction. This is a formal application layer, not a place for core layout or
+  Doosan-specific execution logic.
 
 The general layer should avoid direct dependency on Doosan-specific message or service
 types where possible. Doosan-specific details such as `dsr_msgs2`, `dsr_controller2`,
 and service paths should remain in the adapter layer.
 
-No ROS 2 package logic has been implemented in this repository yet.
+The current implementation is limited to the robot-agnostic `pallet_layout_core` layer.
+ROS 2 package logic has not been implemented in this repository yet.
 
 ## Validated Doosan Interface
 

@@ -26,9 +26,10 @@ validated workspace remains separate at:
 - Planning: MoveIt2
 - Simulation: Gazebo
 - Python client library: `rclpy`
-- Repository phase: base architecture folders created after completing the initial
-  experiment sequence
+- Repository phase: `pallet_layout_core` scaffold started after completing the initial
+  Doosan-based experiment sequence
 - ROS 2 package code in this repository: not implemented yet
+- Pure Python module code in this repository: `pallet_layout_core` scaffold started
 - Dashboard code in this repository: not implemented yet
 - Prototype scripts in this repository: one Python `rclpy` service client prototype
 
@@ -38,9 +39,11 @@ validated workspace remains separate at:
 - Architecture documentation directory is present.
 - Experiment documentation is present under `docs/experiments/`.
 - Base package folders are present under `ros2_packages/`.
+- `pallet_layout_core` is the first robot-agnostic implementation layer.
 - Base application folder is present under `apps/`.
 - A prototype script is present under `scripts/prototypes/`.
-- Package and application folders contain placeholders only.
+- `robot_motion_client`, `doosan_motion_adapter`, and application folders remain
+  placeholders.
 
 ## Validation Status
 
@@ -61,5 +64,5 @@ Validated areas include:
 
 ## Next Step
 
-Document the initial architecture boundaries before creating ROS 2 package code, nodes,
-or dashboard implementation.
+Complete and validate `pallet_layout_core v0.1`, then define the intermediate
+representation schema and the next integration boundary.

@@ -8,6 +8,10 @@ links to experiments, architecture decisions, and implementation notes.
 
 ## Chapter Mapping
 
+- `tfm-thesis-definition.md`: canonical working thesis, hypothesis, objectives, scope,
+  and target architecture vision.
+- `master_subject_alignment.md`: mapping between the UC3M master's subjects, selected
+  electives, and the TFM direction.
 - `chapter_01_introduction_notes.md`: problem, motivation, project context.
 - `chapter_03_methodology_notes.md`: development process, experiments, validation
   method.
