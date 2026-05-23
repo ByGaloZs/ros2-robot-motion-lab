@@ -55,7 +55,7 @@ The TFM combines several areas of the master's program:
 - Distributed systems through ROS 2 communication concepts and service-based execution.
 - Robotics through motion generation, planning, execution, simulation, and robot adapters.
 - Human-centered computing through the planned Dashboard/UI configuration and supervision layer.
-- Experimental methodology through reproducible commands, experiment files, validation evidence, and technical reports.
+- Experimental methodology through reproducible commands, experiment files, validation evidence, and notebook-based analysis.
 
 ## Academic Framing
 

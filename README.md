@@ -48,14 +48,17 @@ ros2-robot-motion-lab/
 │   ├── implementation/
 │   ├── thesis_notes/
 │   └── templates/
+├── notebooks/
+│   ├── evidence/
+│   ├── experiments/
+│   └── templates/
 ├── ros2_packages/
 │   ├── pallet_layout_core/
 │   ├── robot_motion_client/
 │   └── doosan_motion_adapter/
 ├── apps/
 │   └── pallet_layout_dashboard/
-├── scripts/
-└── reports/
+└── scripts/
 ```
 
 ## Documentation Structure
@@ -66,12 +69,20 @@ ros2-robot-motion-lab/
 - `docs/implementation/`: implementation notes.
 - `docs/thesis_notes/`: rough notes for future TFM writing.
 - `docs/templates/`: reusable documentation templates.
+- `notebooks/`: Jupyter notebooks for experiment notes, evidence, and analysis.
 - `docs/commands/`: validated commands.
-- `reports/`: generated outputs and experiment evidence.
 
 The repository is intentionally structured to support future TFM writing. Experiments,
 ADRs, implementation notes, and generated outputs should be cross-referenced when
 relevant.
+
+Markdown experiment files are the canonical experiment protocols. Jupyter notebooks are
+complementary lab notes for recording terminal outputs, evidence links, generated data,
+plots, and lightweight analysis. Robot motion commands should remain in validated
+terminals or scripts unless an experiment explicitly requires notebook execution.
+
+Experiment evidence and generated outputs should be stored under `notebooks/evidence/`
+and referenced from the matching notebook.
 
 ## Future Direction
 

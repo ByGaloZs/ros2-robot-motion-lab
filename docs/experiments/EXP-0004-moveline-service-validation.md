@@ -225,7 +225,7 @@ Cartesian displacement as expected.
 Evidence can be stored in:
 
 ```text
-assets/evidence/EXP-0004/
+notebooks/evidence/EXP-0004/
 ```
 
 Suggested evidence:

@@ -283,7 +283,7 @@ No blocking warnings or errors were identified during the validation.
 Evidence can be stored in:
 
 ```text
-assets/evidence/EXP-0006/
+notebooks/evidence/EXP-0006/
 ```
 
 Suggested evidence:

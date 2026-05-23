@@ -255,7 +255,7 @@ No namespace difference was identified during this inspection.
 Evidence can be stored in:
 
 ```text
-assets/evidence/EXP-0002/
+notebooks/evidence/EXP-0002/
 ```
 
 Suggested evidence:

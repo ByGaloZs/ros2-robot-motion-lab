@@ -300,7 +300,7 @@ Validated observations:
 Evidence can be stored in:
 
 ```text
-assets/evidence/EXP-0007/
+notebooks/evidence/EXP-0007/
 ```
 
 Suggested evidence:

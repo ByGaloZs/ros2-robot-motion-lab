@@ -253,7 +253,7 @@ movement.
 Evidence can be stored in:
 
 ```text
-assets/evidence/EXP-0001/
+notebooks/evidence/EXP-0001/
 ```
 
 Suggested evidence:

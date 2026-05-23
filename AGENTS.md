@@ -81,14 +81,17 @@ ros2-robot-motion-lab/
 │   ├── implementation/
 │   ├── thesis_notes/
 │   └── templates/
+├── notebooks/
+│   ├── evidence/
+│   ├── experiments/
+│   └── templates/
 ├── ros2_packages/
 │   ├── pallet_layout_core/
 │   ├── robot_motion_client/
 │   └── doosan_motion_adapter/
 ├── apps/
 │   └── pallet_layout_dashboard/
-├── scripts/
-└── reports/
+└── scripts/
 ```
 
 ## Directory Guidelines
@@ -124,6 +127,10 @@ Use this directory for architecture boundaries, package responsibilities, data f
 ### `docs/experiments/`
 
 Use this directory for reproducible experiment documentation.
+
+The Markdown experiment files are the canonical protocols. Jupyter notebooks under
+`notebooks/experiments/` are complementary lab notes for results, outputs, and analysis.
+External evidence files should be stored under `notebooks/evidence/`.
 
 Experiment files should follow this naming convention:
 
@@ -174,10 +181,6 @@ Do not add dashboard code unless explicitly requested.
 Use this directory for small helper scripts and temporary prototypes only.
 
 Do not place final ROS 2 package logic here.
-
-### `reports/`
-
-Use this directory for technical summaries, progress notes, and formal reports.
 
 ## ROS 2 Development Rules
 

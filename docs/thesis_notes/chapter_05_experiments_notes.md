@@ -21,7 +21,8 @@ TFM experiments chapter.
 
 - `docs/experiments/experiment-log.md`
 - `docs/experiments/EXP-0009-pallet-layout-core-v0.1.md`
-- `reports/generated_outputs/`
+- `notebooks/experiments/`
+- `notebooks/evidence/`
 - `docs/thesis_notes/tfm-thesis-definition.md`
 
 ## Pending Work

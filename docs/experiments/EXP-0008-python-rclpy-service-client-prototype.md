@@ -308,7 +308,7 @@ environment being configured with `source /opt/ros/jazzy/setup.bash` and `source
 Evidence can be stored in:
 
 ```text
-assets/evidence/EXP-0008/
+notebooks/evidence/EXP-0008/
 ```
 
 Suggested evidence:

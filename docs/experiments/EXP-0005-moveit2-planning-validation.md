@@ -260,7 +260,7 @@ validation.
 Evidence can be stored in:
 
 ```text
-assets/evidence/EXP-0005/
+notebooks/evidence/EXP-0005/
 ```
 
 Suggested evidence:

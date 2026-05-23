@@ -6,7 +6,8 @@
 experimenting with modular robot motion, trajectory planning, and execution.
 
 The repository is intended for study notes, reproducible experiments, validated
-commands, technical reports, prototype scripts, and future custom ROS 2 packages.
+commands, Jupyter-based experiment evidence, prototype scripts, and future custom ROS 2
+packages.
 
 ## Current Validation Platform
 

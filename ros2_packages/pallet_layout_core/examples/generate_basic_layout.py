@@ -2,7 +2,7 @@
 
 This script demonstrates the intended use of the pure Python module from a repository
 checkout. It builds a layout configuration, generates the deterministic grid layout,
-prints a short summary, and exports the resulting data to a JSON file under `reports/`.
+prints a short summary, and exports the resulting data as notebook evidence.
 """
 
 from pathlib import Path
@@ -30,7 +30,7 @@ def main() -> None:
     print(f"Generated total slots: {total_slots}")
 
     # The exporter creates the parent directory if it does not already exist.
-    output_path = Path("reports/generated_outputs/pallet_layout_core_v0.1/basic_layout.json")
+    output_path = Path("notebooks/evidence/EXP-0009/generated_outputs/basic_layout.json")
     export_layout_to_json(layout, output_path)
 
 

@@ -281,7 +281,7 @@ Validated observations:
 Evidence can be stored in:
 
 ```text
-assets/evidence/EXP-0003/
+notebooks/evidence/EXP-0003/
 ```
 
 Suggested evidence:

@@ -85,5 +85,5 @@ PYTHONPATH=ros2_packages/pallet_layout_core/src python ros2_packages/pallet_layo
 The example writes JSON to:
 
 ```text
-reports/generated_outputs/pallet_layout_core_v0.1/basic_layout.json
+notebooks/evidence/EXP-0009/generated_outputs/basic_layout.json
 ```

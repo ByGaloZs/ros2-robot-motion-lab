@@ -158,7 +158,7 @@ The intermediate representation should provide a stable data format between targ
 generation, visualization, motion clients, and robot adapters.
 
 JSON is the initial practical candidate because it is inspectable, testable, and easy to
-exchange between scripts, dashboards, reports, and integration layers.
+exchange between scripts, dashboards, notebooks, and integration layers.
 
 ### Generic Motion Client
 

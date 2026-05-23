@@ -8,7 +8,7 @@ Accepted
 
 Early project phases need a simple way to inspect, test, store, and exchange generated
 pallet layouts. The same output may later be consumed by unit tests, dashboard previews,
-ROS 2 clients, adapters, reports, and experiment evidence.
+ROS 2 clients, adapters, notebooks, and experiment evidence.
 
 ## Decision
 
@@ -18,7 +18,7 @@ the early implementation phases.
 ## Rationale
 
 JSON is human-readable, easy to version, simple to validate in tests, and broadly
-supported by Python, dashboards, reports, and integration tools. It provides a practical
+supported by Python, dashboards, notebooks, and integration tools. It provides a practical
 bridge between pure layout generation and later ROS 2 execution layers.
 
 ## Consequences
