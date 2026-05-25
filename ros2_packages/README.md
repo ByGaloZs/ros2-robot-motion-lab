@@ -5,9 +5,9 @@
 This directory contains custom modules and future ROS 2 packages created specifically for
 this lab.
 
-The repository architecture separates robot-agnostic logic from robot-specific adapters.
-This keeps reusable planning and layout code independent from the current Doosan
-validation platform.
+The repository architecture separates robot-agnostic domain logic from motion abstraction
+and robot-specific adapters. This keeps reusable computation independent from the current
+Doosan validation platform.
 
 ## Current Status
 
@@ -30,12 +30,12 @@ future ROS 2 package work.
 - Do not add ROS 2 dependencies to robot-agnostic modules unless their scope changes and
   the architecture is documented first.
 
-## Components
+## Current And Planned Components
 
 ```text
-pallet_layout_core      -> pure Python robot-agnostic pallet layout generation
-robot_motion_client    -> future generic motion request and execution interface
-doosan_motion_adapter  -> future Doosan-specific ROS 2 adapter
+domain modules          -> pure robot-agnostic computation
+motion abstraction      -> future generic motion request and execution interface
+robot-specific adapters -> future platform-specific ROS 2 adapters
 ```
 
 ## `pallet_layout_core`
@@ -88,17 +88,9 @@ See also:
 
 ## Future Direction
 
-The future package layers are expected to remain separated as:
-
-```text
-pallet_layout_core
-robot_motion_client
-doosan_motion_adapter
-```
-
-Implementation of `robot_motion_client` and `doosan_motion_adapter` should only start
-after the relevant responsibilities, interfaces, commands, and expected behavior are
-documented.
+Future package layers should remain separated by responsibility. Implementation of motion
+abstractions and robot-specific adapters should only start after the relevant interfaces,
+commands, and expected behavior are documented.
 
 Do not create ROS 2 nodes, launch files, `package.xml` files, or ROS 2 package dependencies
 for these future layers until implementation is explicitly requested.

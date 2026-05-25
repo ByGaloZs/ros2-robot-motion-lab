@@ -27,6 +27,6 @@ TFM experiments chapter.
 
 ## Pending Work
 
-- Complete `EXP-0009` after validating `pallet_layout_core v0.1` tests, generated output,
+- Complete current domain-module validation evidence, including tests, generated output,
   and manual review evidence.
 - Add evidence files and references for each future experiment.

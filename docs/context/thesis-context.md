@@ -2,9 +2,9 @@
 
 ## Objective
 
-Design, implement, and evaluate a modular ROS 2-based architecture for robotic
-trajectory generation, planning, and execution, using a Doosan robot as the experimental
-validation platform.
+Design, implement, and evaluate a modular robotics motion architecture for domain
+computation, motion abstraction, planning or execution integration, and reproducible
+validation, using Doosan ROS 2 as the current experimental validation platform.
 
 The canonical working definition of the TFM thesis, hypothesis, objectives, scope, and
 layer responsibilities is maintained in:
@@ -36,18 +36,17 @@ The architecture should separate:
 - configuration;
 - validation and experiments.
 
-Lower-level modules must not depend on upper-level modules. For example,
-`pallet_layout_core` must not depend on Dashboard/UI code, and robot adapters must not
-embed UI logic.
+Lower-level modules must not depend on upper-level modules. Domain modules must not depend
+on Dashboard/UI code, and robot adapters must not embed UI logic.
 
-## Candidate Use Case
+## Candidate Use Cases
 
-Adaptive robotic palletizing is a possible future use case because it requires
-trajectory generation, planning, execution, and validation against changing task
-constraints.
+Use cases should be selected because they exercise the architectural boundaries: domain
+computation, intermediate representations, motion requests, robot-specific adapters, and
+validation workflows.
 
-In the current repository state, palletizing is being used as the first concrete use case
-through `pallet_layout_core`.
+Any current implementation module should be treated as a validation input, not as the
+final thesis scope.
 
 ## Validation Tools
 

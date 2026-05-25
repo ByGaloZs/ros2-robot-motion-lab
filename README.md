@@ -2,8 +2,9 @@
 
 ## Purpose
 
-This repository is a general ROS 2 robot motion architecture lab focused on modular
-robot motion, trajectory planning, and execution.
+This repository is a general modular robotics motion architecture lab focused on
+robot-agnostic domain logic, motion abstraction, robot-specific adapters, reproducible
+validation, and formal documentation.
 
 It is used to document validated commands, reproducible experiments, prototype scripts,
 and future package design for robot motion software. The repository also supports
@@ -54,11 +55,9 @@ ros2-robot-motion-lab/
 │   ├── experiments/
 │   └── templates/
 ├── ros2_packages/
-│   ├── pallet_layout_core/
-│   ├── robot_motion_client/
-│   └── doosan_motion_adapter/
+│   └── custom modules and future ROS 2 packages
 ├── apps/
-│   └── pallet_layout_dashboard/
+│   └── future application-level interfaces
 └── scripts/
     ├── prototypes/
     ├── setup/
@@ -90,30 +89,24 @@ and referenced from the matching notebook.
 
 ## Future Direction
 
-Future software should separate general robot motion logic from robot-specific
-communication.
+Future software should separate domain computation, motion requests, robot-specific
+communication, validation workflows, and application interfaces.
 
 Planned conceptual layers:
 
-- `pallet_layout_core`: pure Python, robot-agnostic pallet layout generation logic.
-- `robot_motion_client`: general robot motion client layer for motion requests,
-  validation, and execution flow.
-- `doosan_motion_adapter`: Doosan-specific adapter for official Doosan ROS 2 services
-  and interfaces.
-- `pallet_layout_dashboard`: future application interface for pallet layout
-  visualization and interaction.
+- Domain modules: pure robot-agnostic computation.
+- Motion abstraction: general motion requests, validation, and execution flow.
+- Robot-specific adapters: platform communication through official interfaces.
+- Application interfaces: configuration, visualization, supervision, and reproducibility
+  when explicitly requested.
 
-`pallet_layout_core` now has an initial pure Python implementation under
-`ros2_packages/pallet_layout_core/`, including source code, tests, examples, JSON export,
-and generated experiment evidence. It is intentionally ROS-independent even though it
-lives under `ros2_packages/`; it is not currently a ROS 2 package and does not contain
-ROS 2 nodes, launch files, `rclpy` integration, Doosan service calls, MoveIt2 logic, or
-Gazebo integration.
+Current implementation detail: `pallet_layout_core` is an initial pure Python,
+robot-agnostic domain module under `ros2_packages/pallet_layout_core/`. It is not the
+repository identity or final thesis scope.
 
-`robot_motion_client`, `doosan_motion_adapter`, and `pallet_layout_dashboard` remain
-future/planned components. No ROS 2 package implementation, Doosan adapter logic, or
-dashboard application code has been implemented yet.
+No ROS 2 package implementation, robot adapter logic, or dashboard application code has
+been implemented yet.
 
-The current next implementation target is to finish reviewing and documenting the
-`pallet_layout_core v0.1` boundary before starting dashboard, generic motion client, or
-Doosan-specific adapter work.
+The next implementation targets should be selected from architecture needs, validated
+experiment results, and explicit user direction rather than from any single current
+module.

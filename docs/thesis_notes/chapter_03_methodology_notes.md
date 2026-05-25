@@ -10,7 +10,7 @@ for the future TFM methodology chapter.
 - Use incremental experiments to validate environment, interfaces, modules, and
   integration points.
 - Preserve command evidence and experiment files as technical traceability.
-- Start with robot-agnostic layout generation before robot execution.
+- Start with robot-agnostic domain computation before robot execution.
 - Clearly distinguish implemented modules, validated commands, planned layers, and future
   integration work.
 - Evaluate the architecture using software engineering criteria such as maintainability,
@@ -26,5 +26,5 @@ for the future TFM methodology chapter.
 
 ## Pending Work
 
-- Complete validation evidence for `pallet_layout_core v0.1`.
+- Complete validation evidence for the first robot-agnostic domain module.
 - Decide how generated JSON outputs will be versioned, stored, and referenced.

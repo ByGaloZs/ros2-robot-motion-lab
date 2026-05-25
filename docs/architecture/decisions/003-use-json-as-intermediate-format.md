@@ -7,12 +7,12 @@ Accepted
 ## Context
 
 Early project phases need a simple way to inspect, test, store, and exchange generated
-pallet layouts. The same output may later be consumed by unit tests, dashboard previews,
+domain outputs. The same output may later be consumed by unit tests, dashboard previews,
 ROS 2 clients, adapters, notebooks, and experiment evidence.
 
 ## Decision
 
-JSON will be used as the intermediate output format for generated pallet layouts during
+JSON will be used as the intermediate output format for generated domain outputs during
 the early implementation phases.
 
 ## Rationale
@@ -25,7 +25,7 @@ bridge between pure layout generation and later ROS 2 execution layers.
 
 ### Positive
 
-- Generated layouts can be inspected and attached to experiment evidence.
+- Generated outputs can be inspected and attached to experiment evidence.
 - The same output can support tests, dashboard previews, ROS 2 clients, and adapters.
 
 ### Trade-offs

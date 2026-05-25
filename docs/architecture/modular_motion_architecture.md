@@ -2,9 +2,9 @@
 
 ## Purpose
 
-The goal is to separate robot-agnostic motion concepts from robot-specific execution so
-that layout generation, motion requests, and vendor-specific communication can evolve
-independently.
+The goal is to separate robot-agnostic domain computation, motion requests,
+robot-specific execution, validation workflows, and application interfaces so they can
+evolve independently.
 
 ## Architecture Overview
 
@@ -15,43 +15,41 @@ Dashboard / UI
       ↓
 Application API / Backend
       ↓
-pallet_layout_core
+Robot-Agnostic Domain Modules
       ↓
-Intermediate Target Representation / JSON
+Intermediate Target Representation
       ↓
-robot_motion_client
+Motion Abstraction
       ↓
-doosan_motion_adapter
+Robot-Specific Adapter
       ↓
-Doosan ROS 2 / MoveIt2 / Gazebo / Emulator
+ROS 2 / MoveIt2 / Gazebo / Emulator / Robot Platform
 ```
 
 ## Components
 
-### `pallet_layout_core`
+### Robot-Agnostic Domain Modules
 
-This module contains pure layout logic:
+Domain modules contain pure task or scenario computation:
 
-- Box dimensions
-- Pallet dimensions
-- Layers
-- Slots
-- Target pose generation
-- JSON export
+- Input models and validation
+- Scenario or target generation
+- Deterministic outputs for tests and experiments
+- Export to documented intermediate representations when needed
 
-It must remain robot-agnostic and should not depend on Doosan, ROS 2 execution details,
-MoveIt2, Gazebo, or Dashboard/UI code.
+They must remain robot-agnostic and should not depend on Doosan, ROS 2 execution details,
+MoveIt2, Gazebo, robot-specific APIs, or Dashboard/UI code.
 
-Current status: implemented as a pure Python module.
+Current status: one pure Python domain module exists as an initial implementation detail.
 
 ### Intermediate Target Representation / JSON
 
-This layer provides a stable data format between layout generation, visualization, motion
+This layer provides a stable data format between domain modules, visualization, motion
 clients, and future adapters.
 
-Current status: partially implemented through JSON export from `pallet_layout_core`.
+Current status: partially explored through JSON export from the first domain module.
 
-### `robot_motion_client`
+### Motion Abstraction
 
 This module will define the general motion interface:
 
@@ -60,42 +58,43 @@ This module will define the general motion interface:
 - Motion sequences
 - Execution results
 
-It should represent generic robot motion concepts without depending directly on Doosan.
+It should represent generic robot motion concepts without depending directly on any
+specific robot platform.
 
 Current status: placeholder / future implementation.
 
-### `doosan_motion_adapter`
+### Robot-Specific Adapter
 
-This adapter will translate generic motion requests into Doosan ROS 2 service calls.
+Adapters translate generic motion requests into concrete platform interfaces.
 
-It is the Doosan-specific implementation layer.
+The current validation platform implies a future Doosan-specific adapter, but that adapter
+does not define the general architecture.
 
 Current status: placeholder / future implementation.
 
-### `pallet_layout_dashboard`
+### Application Interface
 
-This future app is a formal application layer. It will allow a user or operator to
-configure and supervise palletizing scenarios, including:
+Future apps are formal application layers. They may allow a user or operator to configure
+and supervise validation scenarios, including:
 
-- Pallet layouts
-- Layers
-- Slots
-- Box positions
+- Domain-specific inputs
+- Generated targets
 - Target poses
-- Intermediate JSON or target data
+- Intermediate representations
 - Validation results
 
 It should be used first as a validation tool before sending generated poses to the
 robot.
 
-The dashboard must not contain core layout generation or Doosan-specific execution logic.
+Application interfaces must not contain core domain computation or robot-specific
+execution logic.
 
 Current status: planned / not implemented yet.
 
 ## Design Principle
 
-- Keep layout generation independent from robot execution.
+- Keep domain computation independent from robot execution.
 - Keep generic motion concepts separate from vendor-specific adapters.
 - Use Doosan as an experimental platform, not as the architectural boundary.
-- Keep dependencies flowing from upper layers to lower layers, not from core modules back
-  into UI or robot-specific layers.
+- Keep dependencies flowing from upper layers to lower layers, not from domain modules
+  back into UI or robot-specific layers.

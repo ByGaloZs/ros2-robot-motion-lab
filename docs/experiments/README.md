@@ -41,9 +41,9 @@ experiment ID.
 
 Future experiments will validate custom modules and integration paths such as:
 
-- `pallet_layout_core`
-- `robot_motion_client`
-- `doosan_motion_adapter`
+- robot-agnostic domain modules
+- motion abstraction
+- robot-specific adapters
 - dashboard preview
 - RViz pose visualization
 - MoveIt2 planning

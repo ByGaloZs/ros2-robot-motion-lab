@@ -2,7 +2,7 @@
 
 ## Current Stage
 
-TFM architecture consolidation and first robot-agnostic module review.
+TFM architecture consolidation and robot-agnostic module boundary review.
 
 The project is currently focused on defining a modular robot motion architecture and
 validating the first robot-agnostic layer before implementing ROS 2 integration packages.
@@ -17,25 +17,26 @@ validating the first robot-agnostic layer before implementing ROS 2 integration 
 - TFM context documented.
 - Canonical TFM thesis definition documented.
 - Initial experiment documentation started.
-- `pallet_layout_core v0.1` implemented as a pure Python module under
+- Initial robot-agnostic domain module implemented as pure Python under
   `ros2_packages/pallet_layout_core`.
-- `pallet_layout_core` source code, tests, example script, and JSON export are present.
+- Source code, tests, example script, and JSON export are present for the initial domain
+  module.
 - Generated JSON evidence exists for EXP-0009 under
   `notebooks/evidence/EXP-0009/generated_outputs/`.
-- Isolated unit test command for `pallet_layout_core` validated with
+- Isolated unit test command for the initial domain module validated with
   `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1` to avoid ROS 2 pytest plugin autoloading.
 
 ## In Progress
 
 - Defining the modular architecture.
 - Separating robot-agnostic motion concepts from Doosan-specific execution.
-- Reviewing and documenting the `pallet_layout_core v0.1` boundary.
+- Reviewing and documenting the robot-agnostic domain module boundary.
 - Keeping the repository aligned with the TFM direction.
 
 ## Next Steps
 
-1. Review and document the `pallet_layout_core v0.1` boundary.
-2. Document the `pallet_layout_core` walkthrough if needed for implementation review.
+1. Review and document the robot-agnostic domain module boundary.
+2. Document module walkthroughs only when they clarify architectural boundaries.
 3. Define whether the current JSON output needs a stricter intermediate representation
    schema.
 4. Define Dashboard/UI requirements.

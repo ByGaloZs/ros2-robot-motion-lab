@@ -15,8 +15,8 @@ TFM introduction.
   remain reusable.
 - Dashboard/UI interaction is part of the architecture because it supports configuration,
   supervision, and reproducibility without editing scripts manually.
-- Palletizing is a practical candidate use case for validating target pose generation
-  and execution flow.
+- Validation use cases should be practical enough to exercise target generation, motion
+  abstraction, adapter boundaries, and execution flow.
 
 ## Technical Evidence from Repository
 
@@ -28,4 +28,5 @@ TFM introduction.
 ## Pending Work
 
 - Refine the final TFM research question.
-- Refine the problem statement after `pallet_layout_core v0.1` is fully validated.
+- Refine the problem statement after the first robot-agnostic module boundary is fully
+  reviewed.

@@ -2,13 +2,13 @@
 
 ## Purpose
 
-Organize the study path for this ROS 2 robot motion lab.
+Organize the study path for this modular robotics motion architecture lab.
 
 ## Current Focus
 
 The repository has completed the initial Doosan-based validation sequence. The priority is
-to consolidate the TFM thesis definition, complete `pallet_layout_core v0.1`, and define
-the next architecture boundaries before creating ROS 2 package code.
+to consolidate the TFM thesis definition and define the next architecture boundaries
+before creating ROS 2 package code.
 
 ## Study Areas
 
@@ -17,7 +17,7 @@ the next architecture boundaries before creating ROS 2 package code.
 3. ROS 2 Jazzy basics.
 4. ROS 2 nodes, topics, services, and messages.
 5. Python client libraries with `rclpy`.
-6. Robot-agnostic layout generation.
+6. Robot-agnostic domain computation.
 7. Intermediate target representation and JSON schema design.
 8. Dashboard/UI requirements for configuration and supervision.
 9. Robot motion client architecture.
@@ -30,9 +30,9 @@ the next architecture boundaries before creating ROS 2 package code.
 
 ## Known Future Direction
 
-`pallet_layout_core` is the first implemented robot-agnostic layer. Future custom ROS 2
-packages may be created under `ros2_packages/`, but no ROS 2 code should be added before
-the `robot_motion_client` and `doosan_motion_adapter` responsibilities are defined.
+Future custom ROS 2 packages may be created under `ros2_packages/`, but no ROS 2 code
+should be added before the motion abstraction and robot-specific adapter responsibilities
+are defined.
 
 ## Next Step
 

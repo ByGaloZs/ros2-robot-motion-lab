@@ -7,9 +7,9 @@ TFM architecture chapter.
 
 ## Key Ideas
 
-- Keep `pallet_layout_core` independent from ROS 2 and vendor-specific execution.
-- Use JSON or another documented intermediate representation to decouple layout
-  generation, visualization, motion clients, and adapters.
+- Keep domain modules independent from ROS 2 and vendor-specific execution.
+- Use JSON or another documented intermediate representation to decouple domain
+  computation, visualization, motion clients, and adapters.
 - Use `robot_motion_client` for generic motion concepts.
 - Use `doosan_motion_adapter` for Doosan-specific ROS 2 service integration.
 - Treat the Dashboard/UI as a formal application layer for configuration, visualization,
@@ -21,12 +21,12 @@ TFM architecture chapter.
 
 - `docs/architecture/modular_motion_architecture.md`
 - `docs/architecture/decisions/`
-- `docs/implementation/pallet_layout_core_notes.md`
+- `docs/implementation/`
 - `docs/thesis_notes/tfm-thesis-definition.md`
 
 ## Pending Work
 
-- Refine interfaces after `pallet_layout_core v0.1` is fully validated.
-- Document data flow between layout generation and motion execution.
+- Refine interfaces after the first robot-agnostic module boundary is validated.
+- Document data flow between domain computation and motion execution.
 - Define Dashboard/UI requirements without embedding core logic or robot-specific logic in
   the UI.

@@ -47,15 +47,15 @@ platform.
 Design, implement, and evaluate a modular architecture based on ROS 2 for the
 configuration, generation, planning, and execution of robotic motion, integrating a user
 interface for scenario configuration and result supervision, and validating the proposal
-through a palletizing use case with Doosan Robotics in a simulated environment.
+through reproducible experiments on the current validation platform.
 
 ## Specific Objectives
 
 1. Analyze the requirements of a modular robotic motion architecture in ROS 2.
 2. Design a layered architecture separating UI, application logic, robot-agnostic generation, intermediate representation, generic motion execution, and robot-specific adaptation.
-3. Define and validate a robot-agnostic generation layer for palletizing scenarios and target poses.
+3. Define and validate robot-agnostic generation layers for scenarios and target poses.
 4. Define an intermediate representation for generated motion targets.
-5. Specify or develop a Dashboard/UI layer for configuring palletizing scenarios and visualizing generated layouts.
+5. Specify or develop a Dashboard/UI layer for configuring validation scenarios and visualizing generated targets.
 6. Define or implement a generic motion client capable of consuming intermediate targets.
 7. Define or implement a Doosan-specific adapter using the available Doosan Robotics ROS 2 interfaces.
 8. Validate the architecture through reproducible experiments in simulation.
@@ -68,7 +68,7 @@ In scope:
 - Modular software architecture.
 - ROS 2-based robotic motion workflow.
 - Dashboard/UI as an interaction and supervision layer.
-- Palletizing as the experimental use case.
+- Practical validation scenarios that exercise the architectural boundaries.
 - Doosan Robotics as validation platform.
 - Simulation-based validation.
 - Intermediate data representation.
@@ -80,7 +80,7 @@ In scope:
 Out of scope unless the thesis direction is explicitly revised:
 
 - Real industrial deployment.
-- Full production-grade palletizing system.
+- Full production-grade domain application.
 - Physical robot execution as a hard requirement.
 - Industrial safety certification.
 - Full warehouse management integration.
@@ -130,9 +130,9 @@ logic must not depend on Dashboard/UI code, and robot adapters must not embed UI
 
 ### Dashboard / UI
 
-The Dashboard/UI should allow a user or operator to configure palletizing scenarios, enter
-dimensions, select layout parameters, visualize generated layouts, inspect intermediate
-data, and supervise validation results.
+The Dashboard/UI should allow a user or operator to configure validation scenarios, enter
+domain parameters, visualize generated targets, inspect intermediate data, and supervise
+validation results.
 
 The Dashboard/UI is a formal application layer. It should not contain core target
 generation logic or robot-specific execution logic.
@@ -145,12 +145,11 @@ data, and can eventually trigger motion workflows.
 
 ### Robot-Agnostic Scenario and Target Generation
 
-This layer should generate robot-agnostic scenario data, layouts, and target poses from
-input parameters. It should remain independent from ROS 2, Doosan Robotics, MoveIt2,
-Gazebo, robot kinematics, and Dashboard/UI code.
+This layer should generate robot-agnostic scenario data and target poses from input
+parameters. It should remain independent from ROS 2, Doosan Robotics, MoveIt2, Gazebo,
+robot kinematics, and Dashboard/UI code.
 
-An initial prototype of this idea can be used to validate palletizing geometry before full
-ROS 2 integration.
+Initial prototypes can validate domain computation before full ROS 2 integration.
 
 ### Intermediate Target Representation / JSON
 

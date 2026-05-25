@@ -2,56 +2,119 @@
 
 ## Project Context
 
-This repository is a general ROS 2 robot motion lab focused on modular robot motion, trajectory planning, and execution.
+This repository is a general robot-agnostic modular robotics motion architecture lab. It supports a thesis-oriented software architecture project focused on modular motion systems, clear architectural boundaries, reproducible validation, and progressive integration from pure domain logic toward ROS 2 only when explicitly requested.
 
-Doosan Robotics ROS 2 and the Doosan `m1013` are the current experimental validation platform. Do not design the whole project as Doosan-only.
+The architecture is robot-agnostic by design. Doosan ROS 2 is the current validation platform, not the architectural scope of the project.
 
-The repository is intentionally separated from the validated official Doosan workspace.
+The repository should remain focused on production-quality source code, formal documentation, reproducible experiments, validated commands, tests, examples, prototype scripts, and future custom ROS 2 packages when explicitly requested.
 
-Do not modify, move, copy, or assume control over:
+## Architectural Scope
+
+The long-term architecture separates these responsibilities:
+
+```text
+ros2-robot-motion-lab/
+├── domain modules
+│   └── pure robot-agnostic computation
+├── motion abstraction
+│   └── general motion request, validation, and execution flow
+├── robot-specific adapters
+│   └── platform-specific communication behind adapter boundaries
+├── apps
+│   └── application interfaces, only when explicitly requested
+├── docs
+│   └── formal repository documentation and validated experiments
+└── notebooks
+    └── experiment notes, evidence, outputs, and analysis
+```
+
+Conceptual responsibilities:
+
+- Domain modules: pure robot-agnostic logic that can be tested without ROS 2, robot hardware, simulators, dashboards, or vendor APIs.
+- Motion abstraction: general motion request, validation, and execution-flow concepts.
+- Robot-specific adapters: platform-specific communication through official vendor or ROS 2 interfaces.
+- Apps: future application-level interfaces, only when explicitly requested.
+- Docs and notebooks: formal documentation, reproducible experiment protocols, evidence, outputs, and analysis.
+
+The architecture should remain transferable to other robots or validation platforms. General logic must not depend directly on Doosan-specific service types, paths, package names, MoveIt2, Gazebo, dashboard code, or robot-specific APIs.
+
+Specific implementation modules must not redefine the repository scope. Domain modules must remain robot-agnostic, robot-specific execution must stay behind adapters, and validation platforms must not define the architecture.
+
+Do not create or implement ROS 2 packages, nodes, launch files, `package.xml` files, or `rclpy` integrations unless explicitly requested.
+
+## Current Validation Platform
+
+Doosan Robotics ROS 2 and the Doosan `m1013` are the current experimental validation platform. They are relevant for validation experiments and future adapter work, but they must not become the conceptual center of the repository.
+
+Doosan-specific logic belongs only behind adapter boundaries or inside documented Doosan validation experiments. Do not add Doosan service calls to robot-agnostic domain modules.
+
+The repository is intentionally separated from the validated official Doosan workspace. Do not modify, move, copy, or assume control over:
 
 ```text
 ~/doosan_ws
 ```
 
-That workspace is considered the validated Doosan ROS 2 environment.
+That workspace is considered the validated official Doosan ROS 2 environment. Do not copy official Doosan packages into this repository.
 
-This repository should remain focused on documentation, reproducible experiments, study notes, prototype scripts, and future custom ROS 2 packages.
-
-## Architectural Direction
-
-Future software should distinguish between:
+The currently validated movement service is:
 
 ```text
-pallet_layout_core
-robot_motion_client
-doosan_motion_adapter
+/dsr01/dsr_controller2/motion/move_joint
 ```
 
-Conceptual responsibilities:
+with type:
 
-- `pallet_layout_core`: pure Python, robot-agnostic pallet layout generation and JSON export.
-- `robot_motion_client`: general robot motion client layer for motion requests, validation, and execution flow.
-- `doosan_motion_adapter`: Doosan-specific communication through official Doosan ROS 2 services and interfaces.
+```text
+dsr_msgs2/srv/MoveJoint
+```
 
-`pallet_layout_core` already has an initial pure Python implementation. Pure Python work in this module is allowed when explicitly requested and when it remains independent from ROS 2, Doosan Robotics, MoveIt2, Gazebo, and dashboard code.
+Treat this as the first concrete adapter target, not as the full project architecture.
 
-Do not create or implement ROS 2 packages, nodes, launch files, `package.xml` files, or `rclpy` integrations unless explicitly requested.
+## External Knowledge Base
 
-General logic should not depend directly on Doosan-specific service types, paths, or package names unless the task is explicitly about the Doosan adapter or Doosan validation experiments.
+This repository is connected to an external Obsidian Vault used as a thesis-oriented knowledge base:
 
-Doosan-specific logic belongs only in future adapter work or documented Doosan validation experiments. Do not add Doosan service calls to `pallet_layout_core` or other robot-agnostic modules.
+```text
+/home/galozs-dev/Documents/Modular Robotics Architecture
+```
 
-## Official References
+The Vault is not part of this repository and must not be treated as source code or formal repository documentation.
 
-Use these official references when working with ROS 2 or Doosan Robotics ROS 2:
+Use the Vault for thesis context, research notes, source-backed knowledge, papers and official documentation captures, ROS 2 and Doosan knowledge synthesis, architecture reasoning, hypotheses, open questions, ADRs, experiment ideas, reusable AI prompts and workflows, and long-term project memory.
 
-- ROS 2 Jazzy documentation: https://docs.ros.org/en/jazzy/
-- Doosan Robotics ROS 2 Jazzy manual: https://doosanrobotics.github.io/doosan-robotics-ros-manual/jazzy/index.html
+Use this repository for implementation, reproducible experiments, validated commands, formal project documentation, implementation notes, tests, examples, future ROS 2 packages when explicitly requested, and artifacts that directly support implementation and validation.
 
-When implementing or documenting ROS 2 behavior, prefer official documentation over assumptions.
+The Vault informs the repository.
+The repository implements, documents, and validates.
+The Vault does not replace formal repository documentation.
 
-Do not invent ROS 2 commands, Doosan services, message types, launch files, package names, or APIs. If something is unknown, inspect the local workspace or ask for clarification before making changes.
+When an AI agent needs broader thesis context, research notes, source-backed knowledge, prior decisions, or reusable prompts, it may consult the Vault. When using the Vault:
+
+1. Read this repository `AGENTS.md` first.
+2. Read the Vault `AGENTS.md` before navigating the Vault.
+3. Read `wiki/index.md` before navigating individual wiki pages.
+4. Prefer processed knowledge in `wiki/`.
+5. Use `sources/` only for verification, raw evidence, or source-level checks.
+6. Do not modify Vault files unless the user explicitly requests Vault maintenance.
+7. Do not copy raw Vault notes into repository documentation without explicit approval.
+8. Do not treat the Vault as source code.
+9. Do not treat the Vault as a replacement for repository documentation.
+10. If a repository decision is derived from Vault knowledge, document the final decision inside the repository and optionally reference the Vault path.
+
+## Agent Instruction Stability
+
+`AGENTS.md` is a stable instruction file for AI agents. It is not a development log, experiment record, research note, or feature changelog.
+
+Update `AGENTS.md` only when structural or long-term rules change, such as architectural boundaries, repository responsibilities, AI agent behavior, external knowledge base paths, validation platform strategy, or allowed and prohibited implementation behavior.
+
+Do not update `AGENTS.md` for normal feature work, individual functions, small implementation changes, routine tests, regular experiment results, temporary notes, or short-term ideas.
+
+Use this placement rule:
+
+- If the change affects how an AI agent should behave in the project, update `AGENTS.md`.
+- If the change explains what was done, use `docs/`.
+- If the change captures research, reasoning, sources, or hypotheses, use the Vault.
+- If the change is implementation, use the repository source tree.
 
 ## Repository Language
 
@@ -63,12 +126,16 @@ Keep technical writing clear, concise, and practical.
 
 1. Do not generate ROS 2 code unless explicitly requested.
 2. Do not create ROS 2 packages unless explicitly requested.
-3. Do not modify the official Doosan workspace.
-4. Prefer small, incremental, maintainable changes.
-5. Keep the repository simple and avoid overengineering.
-6. Use official ROS 2 and Doosan interfaces when possible.
-7. Do not invent APIs, packages, services, or commands.
-8. When uncertain, inspect the existing project structure before proposing changes.
+3. Do not create ROS 2 nodes, launch files, `package.xml` files, or `rclpy` integrations unless explicitly requested.
+4. Do not modify the official Doosan workspace.
+5. Do not copy official Doosan packages into this repository.
+6. Prefer small, incremental, maintainable changes.
+7. Keep the repository simple and avoid overengineering.
+8. Separate robot-agnostic logic from robot-specific communication.
+9. Keep robot-specific behavior behind adapter boundaries.
+10. Use official ROS 2 and Doosan interfaces when possible.
+11. Do not invent APIs, packages, services, commands, message types, or launch files.
+12. When uncertain, inspect the existing project structure before proposing changes.
 
 ## Repository Structure
 
@@ -93,11 +160,9 @@ ros2-robot-motion-lab/
 │   ├── experiments/
 │   └── templates/
 ├── ros2_packages/
-│   ├── pallet_layout_core/
-│   ├── robot_motion_client/
-│   └── doosan_motion_adapter/
+│   └── custom modules and future ROS 2 packages
 ├── apps/
-│   └── pallet_layout_dashboard/
+│   └── future application-level interfaces
 └── scripts/
     ├── prototypes/
     ├── setup/
@@ -120,7 +185,7 @@ thesis-context.md
 
 ### `docs/thesis_notes/`
 
-Use this directory for rough working notes that may later support TFM writing.
+Use this directory for repository-side thesis notes that directly support implementation or validation. Broader research notes, source synthesis, hypotheses, and long-term reasoning belong in the external Vault.
 
 ### `docs/implementation/`
 
@@ -128,19 +193,17 @@ Use this directory for implementation notes, assumptions, limitations, and modul
 
 ### `docs/templates/`
 
-Use this directory for reusable documentation templates.
+Use this directory for reusable repository documentation templates.
 
 ### `docs/architecture/`
 
-Use this directory for architecture boundaries, package responsibilities, data flow, and design decisions.
+Use this directory for architecture boundaries, package responsibilities, data flow, and design decisions that are formalized for this repository.
 
 ### `docs/experiments/`
 
 Use this directory for reproducible experiment documentation.
 
-The Markdown experiment files are the canonical protocols. Jupyter notebooks under
-`notebooks/experiments/` are complementary lab notes for results, outputs, and analysis.
-External evidence files should be stored under `notebooks/evidence/`.
+The Markdown experiment files are the canonical protocols. Jupyter notebooks under `notebooks/experiments/` are complementary lab notes for results, outputs, and analysis. External evidence files should be stored under `notebooks/evidence/`.
 
 Experiment files should follow this naming convention:
 
@@ -162,17 +225,11 @@ Do not add commands unless they have a clear purpose and are known to be relevan
 
 Use this directory for custom modules and future ROS 2 packages created specifically for this lab.
 
-Current components:
+Current and planned contents may include pure domain modules, motion abstractions, and robot-specific adapters. Do not let any single implementation module redefine the repository scope.
 
-```text
-pallet_layout_core
-robot_motion_client
-doosan_motion_adapter
-```
+Existing implementation detail: `pallet_layout_core` is currently a pure Python, ROS-independent domain module with source code, tests, examples, and JSON export. It is not a ROS 2 package at this stage.
 
-`pallet_layout_core` is currently a pure Python, ROS-independent module with source code, tests, examples, and JSON export. It is not a ROS 2 package at this stage.
-
-`robot_motion_client` and `doosan_motion_adapter` remain placeholders for future package work. Do not add ROS 2 package code, nodes, launch files, `package.xml` files, or `rclpy` integration unless explicitly requested.
+Do not add ROS 2 package code, nodes, launch files, `package.xml` files, or `rclpy` integration unless explicitly requested.
 
 Do not copy official Doosan packages into this directory.
 
@@ -180,13 +237,7 @@ Do not copy official Doosan packages into this directory.
 
 Use this directory for future application-level interfaces.
 
-Current placeholder:
-
-```text
-pallet_layout_dashboard
-```
-
-Do not add dashboard code unless explicitly requested.
+Do not add dashboard or application code unless explicitly requested.
 
 ### `scripts/`
 
@@ -194,9 +245,20 @@ Use this directory for small helper scripts and temporary prototypes only.
 
 Do not place final ROS 2 package logic here.
 
-## ROS 2 Development Rules
+## Development Rules
 
-When ROS 2 code is requested:
+When code is requested:
+
+- Use clear English names.
+- Prefer simple modules.
+- Include type hints when supported.
+- Write minimal comments only for non-obvious logic.
+- Avoid unnecessary abstractions.
+- Keep functions focused.
+- Avoid large files when a smaller module is clearer.
+- Keep pure domain logic independent from ROS 2, Doosan, MoveIt2, Gazebo, dashboard code, and robot-specific APIs.
+
+When ROS 2 code is explicitly requested:
 
 1. Prefer Python with `rclpy` unless another language is explicitly requested.
 2. Use clear package names in English.
@@ -206,22 +268,6 @@ When ROS 2 code is requested:
 6. Use type hints where applicable.
 7. Keep configuration external when it improves maintainability.
 8. Do not depend on high-level wrappers unless explicitly required.
-
-## Doosan Platform Notes
-
-The currently validated movement service is:
-
-```text
-/dsr01/dsr_controller2/motion/move_joint
-```
-
-with type:
-
-```text
-dsr_msgs2/srv/MoveJoint
-```
-
-Treat this as the first concrete adapter target, not as the full project architecture.
 
 ## Documentation Rules
 
@@ -234,18 +280,16 @@ For every meaningful technical task, prefer documenting:
 5. What result was obtained.
 6. What the next step is.
 
-## External Architecture Notes
+Architecture ideas from the external Vault should only be copied into this repository when they become actionable implementation documentation, ADRs, or experiment plans and the user has approved using that Vault content.
 
-Architecture ideas from external notes or an Obsidian pre-implementation vault should only be copied into this repository when they become actionable implementation documentation, ADRs, or experiment plans.
-
-Do not treat the Obsidian vault as canonical for this repository unless the relevant concept is reflected in repository documentation such as `README.md`, `docs/architecture/`, `docs/implementation/`, or `docs/experiments/`.
+Do not treat the Vault as canonical for this repository unless the relevant concept is reflected in repository documentation such as `README.md`, `docs/architecture/`, `docs/implementation/`, or `docs/experiments/`.
 
 ## Experiment Documentation Template
 
 Use this structure for experiment files:
 
 ```md
-# EXP-XXXX — Experiment Title
+# EXP-XXXX - Experiment Title
 
 ## Objective
 
@@ -314,17 +358,16 @@ TBD
 TBD
 ````
 
-## Code Style
+## Official References
 
-When code is requested:
+Use these official references when working with ROS 2 or Doosan Robotics ROS 2:
 
-- use clear English names;
-- prefer simple modules;
-- include type hints when supported;
-- write minimal comments only for non-obvious logic;
-- avoid unnecessary abstractions;
-- keep functions focused;
-- avoid large files when a smaller module is clearer.
+- ROS 2 Jazzy documentation: https://docs.ros.org/en/jazzy/
+- Doosan Robotics ROS 2 Jazzy manual: https://doosanrobotics.github.io/doosan-robotics-ros-manual/jazzy/index.html
+
+When implementing or documenting ROS 2 behavior, prefer official documentation over assumptions.
+
+Do not invent ROS 2 commands, Doosan services, message types, launch files, package names, or APIs. If something is unknown, inspect the local workspace, consult official documentation, consult approved repository documentation, or ask for clarification before making changes.
 
 ## Safety and Stability
 
@@ -359,8 +402,6 @@ Prepare package architecture notes
 
 Do not commit generated build artifacts, logs, ROS bag files, virtual environments, or local environment files.
 
-## Current Project Status
+## Change Policy
 
-The initial Doosan-based experiment sequence is complete. `pallet_layout_core v0.1` has an initial pure Python implementation with tests, examples, JSON export, and generated experiment evidence.
-
-The current priority is to finish reviewing and documenting the `pallet_layout_core v0.1` boundary before starting ROS 2 package implementation. `robot_motion_client`, `doosan_motion_adapter`, and `pallet_layout_dashboard` remain planned future components.
+Keep this file stable and focused on agent behavior. Prefer changing repository documentation, experiment files, implementation notes, source code, tests, or the external Vault instead of changing `AGENTS.md` unless the change affects long-term agent instructions.
