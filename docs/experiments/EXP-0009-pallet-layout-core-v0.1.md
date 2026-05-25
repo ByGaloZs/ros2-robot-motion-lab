@@ -35,10 +35,14 @@ slots, and target poses without depending on ROS 2 or Doosan-specific services.
 
 ## Procedure
 
-1. Define the initial data models. 2. Validate input dimensions. 3. Generate grid-based
-slots for one layer. 4. Generate multiple layers. 5. Calculate target poses for every
-slot. 6. Export the generated layout as JSON. 7. Run unit tests. 8. Review the generated
-output manually.
+1. Define the initial data models.
+2. Validate input dimensions.
+3. Generate grid-based slots for one layer.
+4. Generate multiple layers.
+5. Calculate target poses for every slot.
+6. Export the generated layout as JSON.
+7. Run unit tests.
+8. Review the generated output manually.
 
 ## Expected Result
 
@@ -54,8 +58,17 @@ The module should generate:
 
 ## Actual Result
 
-Scaffold started for `pallet_layout_core` v0.1. The experiment remains pending until
-tests, generated output, and review evidence are completed.
+`pallet_layout_core v0.1` has an initial pure Python implementation with data models,
+input validation, grid-based layout generation, target pose calculation, JSON export,
+tests, and an example script.
+
+The generated evidence file exists at:
+
+```text
+notebooks/evidence/EXP-0009/generated_outputs/basic_layout.json
+```
+
+The generated output contains 3 layers and 60 total slots for the documented input.
 
 ## Validation Criteria
 
@@ -68,7 +81,7 @@ tests, generated output, and review evidence are completed.
 
 ## Evidence
 
-Initial unit test command verified:
+Initial isolated unit test command verified:
 
 ```bash
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest ros2_packages/pallet_layout_core/tests -q
@@ -83,9 +96,31 @@ Observed result:
 This confirms that the initial `pallet_layout_core` test scaffold can run in isolation
 from ROS 2 pytest plugins.
 
+Current documentation synchronization check:
+
+```bash
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest ros2_packages/pallet_layout_core/tests -q
+```
+
+Observed result:
+
+```txt
+10 passed in 0.02s
+```
+
+Generated output count check:
+
+```txt
+3 layers, 60 total slots
+```
+
 ## Result
 
-Pending
+Validated for the v0.1 scope.
+
+This validates deterministic geometric pallet layout generation, JSON export, and isolated
+unit testing. It does not validate robot execution, planning, reachability, collision
+checking, or integration with ROS 2 packages.
 
 ## Notes
 
@@ -103,5 +138,9 @@ testing boundary of this module.
 
 ## Impact on Architecture
 
-The result of this experiment will influence the data models consumed later by
+The result of this experiment confirms that `pallet_layout_core` can remain a pure Python,
+robot-agnostic module and provide JSON output for later consumers such as
 `robot_motion_client`, `pallet_layout_dashboard`, and `doosan_motion_adapter`.
+
+Future work should define whether the current JSON shape is sufficient or whether a
+stricter intermediate representation schema is needed before integration work starts.

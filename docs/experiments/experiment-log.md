@@ -18,7 +18,7 @@ The initial experiment sequence has been completed and documented.
 | EXP-0006 | Gazebo Simulation Validation | Validated | Gazebo can simulate the Doosan `m1013` and expose robot state through ROS 2. |
 | EXP-0007 | Motion Command Failure Handling | Validated | Invalid service calls fail safely and a recovery command confirms service usability. |
 | EXP-0008 | Python rclpy Service Client Prototype | Validated | A Python `rclpy` prototype can call the official `MoveJoint` service. |
-| EXP-0009 | Pallet Layout Core v0.1 | Pending | Initial isolated unit test command validated; full module validation remains pending. |
+| EXP-0009 | Pallet Layout Core v0.1 | Validated | Pure Python layout generation, tests, JSON export, and generated output evidence are validated for the v0.1 scope. |
 
 ## Experiment Files
 

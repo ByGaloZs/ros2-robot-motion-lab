@@ -23,18 +23,24 @@ This repository should remain focused on documentation, reproducible experiments
 Future software should distinguish between:
 
 ```text
+pallet_layout_core
 robot_motion_client
 doosan_motion_adapter
 ```
 
 Conceptual responsibilities:
 
+- `pallet_layout_core`: pure Python, robot-agnostic pallet layout generation and JSON export.
 - `robot_motion_client`: general robot motion client layer for motion requests, validation, and execution flow.
 - `doosan_motion_adapter`: Doosan-specific communication through official Doosan ROS 2 services and interfaces.
 
-Do not create these packages unless explicitly requested.
+`pallet_layout_core` already has an initial pure Python implementation. Pure Python work in this module is allowed when explicitly requested and when it remains independent from ROS 2, Doosan Robotics, MoveIt2, Gazebo, and dashboard code.
+
+Do not create or implement ROS 2 packages, nodes, launch files, `package.xml` files, or `rclpy` integrations unless explicitly requested.
 
 General logic should not depend directly on Doosan-specific service types, paths, or package names unless the task is explicitly about the Doosan adapter or Doosan validation experiments.
+
+Doosan-specific logic belongs only in future adapter work or documented Doosan validation experiments. Do not add Doosan service calls to `pallet_layout_core` or other robot-agnostic modules.
 
 ## Official References
 
@@ -75,6 +81,7 @@ ros2-robot-motion-lab/
 ├── .gitignore
 ├── docs/
 │   ├── architecture/
+│   │   └── decisions/
 │   ├── commands/
 │   ├── context/
 │   ├── experiments/
@@ -92,6 +99,9 @@ ros2-robot-motion-lab/
 ├── apps/
 │   └── pallet_layout_dashboard/
 └── scripts/
+    ├── prototypes/
+    ├── setup/
+    └── utilities/
 ```
 
 ## Directory Guidelines
@@ -150,9 +160,9 @@ Do not add commands unless they have a clear purpose and are known to be relevan
 
 ### `ros2_packages/`
 
-Use this directory only for future custom ROS 2 packages created specifically for this lab.
+Use this directory for custom modules and future ROS 2 packages created specifically for this lab.
 
-Current placeholders:
+Current components:
 
 ```text
 pallet_layout_core
@@ -160,7 +170,9 @@ robot_motion_client
 doosan_motion_adapter
 ```
 
-These folders are placeholders only. Do not add ROS 2 package code, nodes, or business logic unless explicitly requested.
+`pallet_layout_core` is currently a pure Python, ROS-independent module with source code, tests, examples, and JSON export. It is not a ROS 2 package at this stage.
+
+`robot_motion_client` and `doosan_motion_adapter` remain placeholders for future package work. Do not add ROS 2 package code, nodes, launch files, `package.xml` files, or `rclpy` integration unless explicitly requested.
 
 Do not copy official Doosan packages into this directory.
 
@@ -221,6 +233,12 @@ For every meaningful technical task, prefer documenting:
 4. What result is expected.
 5. What result was obtained.
 6. What the next step is.
+
+## External Architecture Notes
+
+Architecture ideas from external notes or an Obsidian pre-implementation vault should only be copied into this repository when they become actionable implementation documentation, ADRs, or experiment plans.
+
+Do not treat the Obsidian vault as canonical for this repository unless the relevant concept is reflected in repository documentation such as `README.md`, `docs/architecture/`, `docs/implementation/`, or `docs/experiments/`.
 
 ## Experiment Documentation Template
 
@@ -343,4 +361,6 @@ Do not commit generated build artifacts, logs, ROS bag files, virtual environmen
 
 ## Current Project Status
 
-The initial Doosan-based experiment sequence is complete. The current priority is to define the minimal future package architecture before creating ROS 2 package code.
+The initial Doosan-based experiment sequence is complete. `pallet_layout_core v0.1` has an initial pure Python implementation with tests, examples, JSON export, and generated experiment evidence.
+
+The current priority is to finish reviewing and documenting the `pallet_layout_core v0.1` boundary before starting ROS 2 package implementation. `robot_motion_client`, `doosan_motion_adapter`, and `pallet_layout_dashboard` remain planned future components.

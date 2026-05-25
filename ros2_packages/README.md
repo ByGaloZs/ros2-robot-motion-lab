@@ -11,14 +11,15 @@ validation platform.
 
 ## Current Status
 
-The current implementation target is `pallet_layout_core`.
+The current implemented module is `pallet_layout_core`.
 
-`pallet_layout_core` has started as a pure Python, robot-agnostic module. It is not a ROS
-2 package at this stage and must not depend on ROS 2, Doosan Robotics, MoveIt2, Gazebo, or
-dashboard code.
+`pallet_layout_core` is a pure Python, robot-agnostic module with source code, tests,
+examples, JSON export, and a validated isolated pytest command. It is not a ROS 2 package
+at this stage and must not depend on ROS 2, Doosan Robotics, MoveIt2, Gazebo, or dashboard
+code.
 
 The `robot_motion_client` and `doosan_motion_adapter` folders remain placeholders for
-future package work.
+future ROS 2 package work.
 
 ## Rules
 
@@ -41,6 +42,9 @@ doosan_motion_adapter  -> future Doosan-specific ROS 2 adapter
 
 `pallet_layout_core` is responsible for generating deterministic pallet layout data from
 box and pallet dimensions.
+
+It currently provides a minimal v0.1 implementation for grid-based layouts, including
+unit tests, an example script, and JSON output used as experiment evidence.
 
 Current scope:
 

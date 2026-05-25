@@ -42,6 +42,7 @@ ros2-robot-motion-lab/
 ├── .gitignore
 ├── docs/
 │   ├── architecture/
+│   │   └── decisions/
 │   ├── commands/
 │   ├── context/
 │   ├── experiments/
@@ -59,6 +60,9 @@ ros2-robot-motion-lab/
 ├── apps/
 │   └── pallet_layout_dashboard/
 └── scripts/
+    ├── prototypes/
+    ├── setup/
+    └── utilities/
 ```
 
 ## Documentation Structure
@@ -91,7 +95,7 @@ communication.
 
 Planned conceptual layers:
 
-- `pallet_layout_core`: future pallet layout and trajectory generation logic.
+- `pallet_layout_core`: pure Python, robot-agnostic pallet layout generation logic.
 - `robot_motion_client`: general robot motion client layer for motion requests,
   validation, and execution flow.
 - `doosan_motion_adapter`: Doosan-specific adapter for official Doosan ROS 2 services
@@ -99,8 +103,17 @@ Planned conceptual layers:
 - `pallet_layout_dashboard`: future application interface for pallet layout
   visualization and interaction.
 
-Only the base folder structure exists. No ROS 2 package logic, nodes, or dashboard code
-has been implemented yet.
+`pallet_layout_core` now has an initial pure Python implementation under
+`ros2_packages/pallet_layout_core/`, including source code, tests, examples, JSON export,
+and generated experiment evidence. It is intentionally ROS-independent even though it
+lives under `ros2_packages/`; it is not currently a ROS 2 package and does not contain
+ROS 2 nodes, launch files, `rclpy` integration, Doosan service calls, MoveIt2 logic, or
+Gazebo integration.
 
-The current next implementation target is `pallet_layout_core v0.1`, before the
-dashboard or Doosan-specific adapter.
+`robot_motion_client`, `doosan_motion_adapter`, and `pallet_layout_dashboard` remain
+future/planned components. No ROS 2 package implementation, Doosan adapter logic, or
+dashboard application code has been implemented yet.
+
+The current next implementation target is to finish reviewing and documenting the
+`pallet_layout_core v0.1` boundary before starting dashboard, generic motion client, or
+Doosan-specific adapter work.
